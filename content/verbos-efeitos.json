@@ -1,0 +1,108 @@
+{
+  "verbos": [
+    {
+      "verbo": "Andar",
+      "input": "Teclas WASD",
+      "feedback": "Som de passos atenuados em cascalho/metal",
+      "efeito": "Deslocamento silencioso e seguro pelo pátio"
+    },
+    {
+      "verbo": "Correr",
+      "input": "Segurar Shift Esquerdo",
+      "feedback": "Passos ruidosos acelerados + barra bilateral central acende e contrai",
+      "efeito": "Aceleração de locomoção com consumo de estamina"
+    },
+    {
+      "verbo": "Olhar / Mirar",
+      "input": "Movimento do Mouse",
+      "feedback": "Rotação contínua da câmera em 1ª pessoa + retículo reativo",
+      "efeito": "Inspeção angular do cenário e direcionamento da visão"
+    },
+    {
+      "verbo": "Interagir / Coletar",
+      "input": "Pressionar E",
+      "feedback": "Som metálico/papel + silhueta luminosa ativa (QuickOutline)",
+      "efeito": "Coleta chaves e notas ou aciona portas e painéis"
+    },
+    {
+      "verbo": "Inspecionar em 3D",
+      "input": "Pressionar E no objeto alvo",
+      "feedback": "Zoom de aproximação de câmera + fundo escurecido",
+      "efeito": "Permite rotacionar garrafas e copos no mouse em 360°"
+    },
+    {
+      "verbo": "Decodificar Cofre",
+      "input": "Teclado Numérico ou Cliques",
+      "feedback": "Cliques mecânicos com retorno luminoso no visor",
+      "efeito": "Inserção dos 7 dígitos da senha final (2341857)"
+    },
+    {
+      "verbo": "Memorizar / Clicar",
+      "input": "Cursor no Totem Genius",
+      "feedback": "Botão emite cor saturada a 100% + nota musical harmônica",
+      "efeito": "Reprodução da sequência rítmica da Sala 2"
+    },
+    {
+      "verbo": "Vigiar Janela",
+      "input": "Olhar diretamente para Augustinho",
+      "feedback": "Interrupção imediata do som de passos externos",
+      "efeito": "Paralisa o avanço de Augustinho no vidro (Gaze Freeze)"
+    },
+    {
+      "verbo": "Consultar Inventário",
+      "input": "Pressionar TAB",
+      "feedback": "Som suave de pasta abrindo (sem pausar o jogo)",
+      "efeito": "Visualização permanente de todas as notas e chaves obtidas"
+    }
+  ],
+  "efeitos": [
+    {
+      "efeito": "Alerta de Proximidade",
+      "gatilho": "Augustinho a menos de 20 metros",
+      "feedback": "Vinheta avermelhada pulsando em ritmo de batimento cardíaco",
+      "consequencia": "Aviso visual tensional de perigo iminente"
+    },
+    {
+      "efeito": "Instabilidade Elétrica",
+      "gatilho": "Perseguição ativa iniciada",
+      "feedback": "Lâmpadas piscam freneticamente (flicker) com zumbido elétrico",
+      "consequencia": "Redução da visibilidade e desorientação espacial"
+    },
+    {
+      "efeito": "Jumpscare de Captura",
+      "gatilho": "Augustinho alcança Maria",
+      "feedback": "Câmera colada no rosto + estática de TV VHS + tremor forte",
+      "consequencia": "Congelamento de controles e teleporte para a cela"
+    },
+    {
+      "efeito": "Retenção na Sala de Castigo",
+      "gatilho": "Entrada na cela de cativeiro",
+      "feedback": "Porta trancada com som de ferro batido + terminal de Quiz ativo",
+      "consequencia": "Perda de tempo real no cronômetro global de 30 minutos"
+    },
+    {
+      "efeito": "Erro de Senha",
+      "gatilho": "Dígitos divergentes no cofre",
+      "feedback": "Bip grave áspero + animação de tremor horizontal (UI Shake)",
+      "consequencia": "Limpeza da entrada e necessidade de recomeçar a digitação"
+    },
+    {
+      "efeito": "Acerto de Enigma",
+      "gatilho": "Validação da senha do cofre ou da 5ª rodada do Genius",
+      "feedback": "Som de trincos mecânicos destravando + abertura de portas",
+      "consequencia": "Ejeção da chave mestra ou liberação da rota de fuga final"
+    },
+    {
+      "efeito": "Tempo Crítico",
+      "gatilho": "Menos de 5 minutos restantes no cronômetro",
+      "feedback": "Bips rítmicos acelerados no HUD + numerais em vermelho",
+      "consequencia": "Alerta auditivo contínuo de proximidade de fracasso"
+    },
+    {
+      "efeito": "Derrota (Game Over)",
+      "gatilho": "Cronômetro atinge 00:00",
+      "feedback": "Tela preta abrupta + risada sarcástica de Lucas pelos alto-falantes",
+      "consequencia": "Encerramento da partida e exibição do botão de tentar novamente"
+    }
+  ]
+}

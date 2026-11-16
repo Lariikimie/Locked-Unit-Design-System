@@ -1,0 +1,24 @@
+{
+  "nome_estudio": "Pingado Studios",
+  "instituicao": "Centro Universitário Senac Santo Amaro",
+  "projeto": "Locked Unit: Escape Room Horror",
+  "missao": "Desenvolver jogos autorais brasileiros que unam acessibilidade, inclusão e excelência narrativa, transformando vivências cotidianas em suspense e desafio intelectual.",
+  "pilares": [
+    {
+      "titulo": "Diegese e Não-Intrusão",
+      "descricao": "A interface em tela é estritamente minimalista. O suspense nasce do ambiente; menus e ícones só emergem sob demanda ou quando há ação contextual direta."
+    },
+    {
+      "titulo": "Clareza sob Tensão Extrema",
+      "descricao": "Em perseguições ou no tempo crítico, a comunicação visual é instintiva e imediata, evitando ambiguidade mental."
+    },
+    {
+      "titulo": "Rústico vs. Tecnológico",
+      "descricao": "Fusão entre chapas metálicas industriais desgastadas, bilhetes manuscritos e visores digitais de LED."
+    },
+    {
+      "titulo": "Comunicação Multimodal Mandatória",
+      "descricao": "Nenhum puzzle ou alerta de perigo depende de um único canal sensorial (somente cor ou somente som)."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "sobre_estudio": {
+    "titulo": "Pingado Studios",
+    "subtitulo": "Estúdio Universitário Brasileiro de Jogos",
+    "historia": "A Pingado Studios nasceu nas salas do Centro Universitário Senac Santo Amaro com uma proposta clara: criar jogos com a cara e o ritmo do Brasil. Nosso objetivo é transformar histórias, gírias, ambientes e vivências cotidianas em jogos eletrônicos e analógicos com forte apelo narrativo e sensibilidade humana.",
+    "missao": "Desenvolver jogos inclusivos, acessíveis e culturalmente autênticos, que desafiem o intelecto e provoquem emoções reais.",
+    "projetos_anteriores": [
+      {
+        "nome": "Guardiões da Floresta",
+        "tipo": "Jogo de Tabuleiro Analógico",
+        "tema": "Preservação cultural dos povos originários e ODS 11.4 da ONU. Inclui cartas, peças de madeira e livro de regras inteiramente adaptados em Braille."
+      },
+      {
+        "nome": "Gritos de um Passado Silenciado",
+        "tipo": "Visual Novel Investigativa (+18)",
+        "tema": "Reflexão sobre feminicídio e tráfico humano alinhado ao ODS 5.2 da ONU, narrando a tensão de jovens presas em uma casa isolada."
+      },
+      {
+        "nome": "Locked Unit",
+        "tipo": "Escape Room Horror 3D (PC)",
+        "tema": "Suspense psicológico urbano ambientado em um pátio de containers após uma festa universitária em Campinas (SP)."
+      }
+    ]
+  }
+}

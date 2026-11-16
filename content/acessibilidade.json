@@ -1,0 +1,52 @@
+{
+  "recursos": [
+    {
+      "titulo": "Controle Amplo de Brilho e Exposição (50% a 250%)",
+      "categoria": "Visual",
+      "descricao": "Atua simultaneamente na luz ambiente da cena e na exposição pós-processada EV do URP (-1.25 EV a +2.75 EV), permitindo calibrar o jogo para monitores escuros ou ambientes com luz solar intensa.",
+      "publico": "Pessoas com baixa acuidade visual, sensibilidade a contrastes escuros ou telas com reflexo."
+    },
+    {
+      "titulo": "Tela de Calibração Inicial (First-Time Setup)",
+      "categoria": "Visual",
+      "descricao": "No primeiro início da partida, orienta o jogador a ajustar os tons escuros ideais para o seu monitor antes de cortar para a cena de horror.",
+      "publico": "Garante a visualização correta para qualquer padrão de monitor."
+    },
+    {
+      "titulo": "Modo Câmera Confortável (Anti-Cinetose)",
+      "categoria": "Motora / Fisiológica",
+      "descricao": "Trava a oscilação do horizonte e desativa 100% do balanço de cabeça (head bobbing) ao andar e correr.",
+      "publico": "Jogadores com labirintite ou propensão a enjoo de movimento (motion sickness)."
+    },
+    {
+      "titulo": "Modo Reduzir Efeitos Visuais",
+      "categoria": "Visual / Fotossensibilidade",
+      "descricao": "Desliga granulação de filme (Film Grain), aberração cromática e atenua tremores de câmera agressivos.",
+      "publico": "Pessoas fotossensíveis, com aura visual, enxaqueca ou sensibilidade a ruídos ópticos."
+    },
+    {
+      "titulo": "Campo de Visão Customizável (FOV 60° a 110°)",
+      "categoria": "Visual / Conforto",
+      "descricao": "Slider dedicado que permite alargar a amplitude angular da câmera, prevenindo sensação de visão de túnel.",
+      "publico": "Conforto óptico em monitores widescreen e prevenção de claustrofobia física."
+    },
+    {
+      "titulo": "Legendas em Alto Contraste",
+      "categoria": "Auditiva",
+      "descricao": "100% dos áudios e transmissões de rádio de Lucas possuem transcrição textual síncrona com fundo escuro legível.",
+      "publico": "Pessoas surdas ou com deficiência auditiva (DDA)."
+    },
+    {
+      "titulo": "Puzzles Multimodais (Genius & Cofre)",
+      "categoria": "Cognitiva / Sensorial",
+      "descricao": "No Totem Genius, cada comando reúne simultaneamente cor saturada, posição física fixa na mesa, luz emissiva e tom sonoro exclusivo. Na aproximação do inimigo, há passos 3D, lanterna e vinheta vermelha.",
+      "publico": "Pessoas daltônicas, com baixa audição ou déficit de atenção."
+    },
+    {
+      "titulo": "Dicas Temporizadas e Inventário Salvo",
+      "categoria": "Cognitiva",
+      "descricao": "Lucas fornece dicas no rádio aos 20, 10 e 5 minutos restantes para evitar bloqueio cognitivo. O inventário (TAB) mantém todas as notas legíveis sem limite de tempo.",
+      "publico": "Dificuldades de memória de trabalho imediata e sobrecarga de raciocínio sob estresse."
+    }
+  ]
+}

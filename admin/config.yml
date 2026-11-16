@@ -1,0 +1,207 @@
+backend:
+  name: github
+  repo: Lariikimie/Locked-Unit-Design-System
+  branch: main
+  auth_methods:
+    - token
+
+media_folder: assets/img/uploads
+public_folder: /assets/img/uploads
+
+display_url: https://lariikimie.github.io/Locked-Unit-Design-System/
+logo_url: https://raw.githubusercontent.com/Lariikimie/Locked-Unit-Design-System/main/assets/img/logo-pingado.png
+
+locale: pt_BR
+
+collections:
+  # -------------------------------------------------------------
+  # SEÇÃO: MARCA E PILARES
+  # -------------------------------------------------------------
+  - name: "marca"
+    label: "Marca & Pilares"
+    files:
+      - file: "content/marca.json"
+        label: "Identidade & Pilares"
+        name: "marca_config"
+        fields:
+          - { label: "Nome do Estúdio", name: "nome_estudio", widget: "string" }
+          - { label: "Instituição de Ensino", name: "instituicao", widget: "string" }
+          - { label: "Nome do Projeto", name: "projeto", widget: "string" }
+          - { label: "Missão do Estúdio", name: "missao", widget: "text" }
+          - label: "Pilares de Design"
+            name: "pilares"
+            widget: "list"
+            fields:
+              - { label: "Título do Pilar", name: "titulo", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+
+  # -------------------------------------------------------------
+  # SEÇÃO: SISTEMA DE VOZES E UX WRITING
+  # -------------------------------------------------------------
+  - name: "tom_de_voz"
+    label: "Sistema de Vozes"
+    files:
+      - file: "content/tom-de-voz.json"
+        label: "Vozes & Microcópia"
+        name: "vozes_config"
+        fields:
+          - label: "Matriz de Vozes"
+            name: "vozes"
+            widget: "list"
+            fields:
+              - { label: "Nome da Voz", name: "nome", widget: "string" }
+              - { label: "Etiqueta / Badge", name: "badge", widget: "string" }
+              - { label: "Tom Emocional", name: "emocao", widget: "string" }
+              - { label: "Linguagem e Regras", name: "linguagem", widget: "text" }
+              - { label: "Exemplo Correto", name: "exemplo_correto", widget: "text" }
+              - { label: "Exemplo Incorreto", name: "exemplo_incorreto", widget: "text" }
+          - label: "Glossário de Microcópia"
+            name: "glossario_microcopia"
+            widget: "list"
+            fields:
+              - { label: "Chave / Ação", name: "chave", widget: "string" }
+              - { label: "Texto Oficial na Interface", name: "valor", widget: "string" }
+
+  # -------------------------------------------------------------
+  # SEÇÃO: DESIGN TOKENS (CORES & FONTES)
+  # -------------------------------------------------------------
+  - name: "tokens"
+    label: "Design Tokens"
+    files:
+      - file: "content/tokens.json"
+        label: "Cores e Tipografia"
+        name: "tokens_config"
+        fields:
+          - label: "Cores Principais da Interface"
+            name: "cores_principais"
+            widget: "list"
+            fields:
+              - { label: "Nome do Token (CSS)", name: "token", widget: "string" }
+              - { label: "Valor Hexadecimal", name: "hex", widget: "string" }
+              - { label: "Nome Amigável", name: "nome", widget: "string" }
+              - { label: "Função Semântica", name: "funcao", widget: "string" }
+          - label: "Cores do Totem Genius (Fase 2)"
+            name: "cores_genius"
+            widget: "list"
+            fields:
+              - { label: "Nome do Token (CSS)", name: "token", widget: "string" }
+              - { label: "Valor Hexadecimal", name: "hex", widget: "string" }
+              - { label: "Nome da Cor", name: "nome", widget: "string" }
+              - { label: "Função no Puzzle", name: "funcao", widget: "string" }
+          - label: "Fontes Licenciadas"
+            name: "fontes"
+            widget: "list"
+            fields:
+              - { label: "Nome do Token (CSS)", name: "token", widget: "string" }
+              - { label: "Família da Fonte", name: "familia", widget: "string" }
+              - { label: "Peso", name: "peso", widget: "string" }
+              - { label: "Tamanho Recomendado", name: "tamanho", widget: "string" }
+              - { label: "Aplicação Exclusiva", name: "uso", widget: "string" }
+
+  # -------------------------------------------------------------
+  # SEÇÃO: VERBOS E EFEITOS (CORE LOOP)
+  # -------------------------------------------------------------
+  - name: "verbos_efeitos"
+    label: "Verbos & Efeitos"
+    files:
+      - file: "content/verbos-efeitos.json"
+        label: "Mapeamento do Core Loop"
+        name: "verbos_efeitos_config"
+        fields:
+          - label: "Verbos da Jogadora (Inputs)"
+            name: "verbos"
+            widget: "list"
+            fields:
+              - { label: "Verbo / Ação", name: "verbo", widget: "string" }
+              - { label: "Input / Comando", name: "input", widget: "string" }
+              - { label: "Feedback Sensorial", name: "feedback", widget: "string" }
+              - { label: "Efeito no Jogo", name: "efeito", widget: "string" }
+          - label: "Efeitos do Sistema (Reações & Tensão)"
+            name: "efeitos"
+            widget: "list"
+            fields:
+              - { label: "Efeito do Sistema", name: "efeito", widget: "string" }
+              - { label: "Gatilho / Condição", name: "gatilho", widget: "string" }
+              - { label: "Feedback Audiovisual", name: "feedback", widget: "string" }
+              - { label: "Consequência no Gameplay", name: "consequencia", widget: "string" }
+
+  # -------------------------------------------------------------
+  # SEÇÃO: ACESSIBILIDADE
+  # -------------------------------------------------------------
+  - name: "acessibilidade"
+    label: "Acessibilidade"
+    files:
+      - file: "content/acessibilidade.json"
+        label: "Recursos de Conforto e Inclusão"
+        name: "acessibilidade_config"
+        fields:
+          - label: "Recursos Implementados"
+            name: "recursos"
+            widget: "list"
+            fields:
+              - { label: "Título do Recurso", name: "titulo", widget: "string" }
+              - { label: "Categoria (Visual/Motora/Auditiva)", name: "categoria", widget: "string" }
+              - { label: "Descrição Detalhada", name: "descricao", widget: "text" }
+              - { label: "Público Beneficiado", name: "publico", widget: "string" }
+
+  # -------------------------------------------------------------
+  # SEÇÃO: MÍDIA KIT & PRESS RELEASE
+  # -------------------------------------------------------------
+  - name: "media_kit"
+    label: "Mídia Kit"
+    files:
+      - file: "content/media-kit.json"
+        label: "Kit de Imprensa e Ficha"
+        name: "media_kit_config"
+        fields:
+          - label: "Ficha Técnica"
+            name: "ficha_tecnica"
+            widget: "object"
+            fields:
+              - { label: "Nome do Jogo", name: "jogo", widget: "string" }
+              - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+              - { label: "Estúdio", name: "estudio", widget: "string" }
+              - { label: "Plataforma", name: "plataforma", widget: "string" }
+              - { label: "Engine", name: "engine", widget: "string" }
+              - { label: "Gênero", name: "genero", widget: "string" }
+              - { label: "Classificação Indicativa", name: "classificacao", widget: "string" }
+              - { label: "Idioma", name: "idioma", widget: "string" }
+              - { label: "Duração Média", name: "duracao", widget: "string" }
+              - { label: "Contato para Imprensa", name: "contato_imprensa", widget: "string" }
+          - label: "Descrições para Imprensa"
+            name: "descricoes"
+            widget: "object"
+            fields:
+              - { label: "Em Uma Frase", name: "uma_frase", widget: "text" }
+              - { label: "Curta (Aprox. 50 Palavras)", name: "curta_50_palavras", widget: "text" }
+              - { label: "Completa (Aprox. 150 Palavras)", name: "completa_150_palavras", widget: "text" }
+          - label: "Destaques (Bullet Points)"
+            name: "destaques"
+            widget: "list"
+            field: { label: "Ponto de Destaque", name: "ponto", widget: "string" }
+
+  # -------------------------------------------------------------
+  # SEÇÃO: SOBRE O ESTÚDIO
+  # -------------------------------------------------------------
+  - name: "sobre"
+    label: "Sobre o Estúdio"
+    files:
+      - file: "content/sobre.json"
+        label: "História e Projetos"
+        name: "sobre_config"
+        fields:
+          - label: "Sobre o Estúdio"
+            name: "sobre_estudio"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+              - { label: "História do Estúdio", name: "historia", widget: "text" }
+              - { label: "Missão", name: "missao", widget: "text" }
+              - label: "Projetos Desenvolvidos"
+                name: "projetos_anteriores"
+                widget: "list"
+                fields:
+                  - { label: "Nome do Jogo", name: "nome", widget: "string" }
+                  - { label: "Tipo / Formato", name: "tipo", widget: "string" }
+                  - { label: "Tema e Contexto Social", name: "tema", widget: "text" }

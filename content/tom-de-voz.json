@@ -1,0 +1,47 @@
+{
+  "vozes": [
+    {
+      "nome": "Interfone (Suspense / Diegético)",
+      "badge": "Voz do Jogo",
+      "classe_badge": "voice-interfone",
+      "emocao": "Cínico, obsessivo, perturbador e passivo-agressivo.",
+      "linguagem": "Segunda pessoa ('você'), frases curtas, tempo presente, detalhes sensoriais (metal frio, respiração, passos). Gírias universitárias paulistas ('dar PT', 'after', 'bandejão').",
+      "exemplo_correto": "\"Maria! Finalmente acordou... não se preocupe, você não deu PT, apesar de parecer muito a festa de ontem...\"",
+      "exemplo_incorreto": "\"Bem-vinda à sua perdição eterna, tola mortal! Você morrerá neste calabouço.\""
+    },
+    {
+      "nome": "Manual (Técnica / Design System)",
+      "badge": "Voz Técnica",
+      "classe_badge": "voice-manual",
+      "emocao": "Impessoal, objetiva, precisa e estruturada.",
+      "linguagem": "Termos padronizados de UX/UI, tabelas claras, especificações de tokens em Hex e px, sem adjetivações emocionais vazias.",
+      "exemplo_correto": "\"Cronômetro global: 30 minutos. Ancorado no topo central da tela (top: 48px). Tipografia Barlow Condensed Bold, 36px.\"",
+      "exemplo_incorreto": "\"Um relógio super maneiro e assustador que fica lá em cima marcando o desespero do jogador.\""
+    },
+    {
+      "nome": "Estúdio (Institucional / Pingado Studios)",
+      "badge": "Voz do Estúdio",
+      "classe_badge": "voice-estudio",
+      "emocao": "Acolhedora, brasileira, colaborativa e ética.",
+      "linguagem": "Primeira pessoa do plural ('nós'), valorização da diversidade cultural, compromisso com acessibilidade e entusiasmo acadêmico.",
+      "exemplo_correto": "\"Na Pingado Studios, acreditamos que os cenários urbanos e a cultura brasileira geram um horror mais autêntico e envolvente.\"",
+      "exemplo_incorreto": "\"Somos a melhor empresa de jogos do mercado corporativo internacional.\""
+    },
+    {
+      "nome": "Imprensa (Mídia Kit)",
+      "badge": "Voz de Mídia",
+      "classe_badge": "voice-imprensa",
+      "emocao": "Factual, clara, jornalística e sintetizada.",
+      "linguagem": "Terceira pessoa, dados verificáveis, frases prontas para publicação e transcrição direta em matérias e reviews.",
+      "exemplo_correto": "\"Desenvolvido por alunas do Senac Santo Amaro, Locked Unit coloca a jogadora no papel de Maria, enfrentando um escape room de 30 minutos.\"",
+      "exemplo_incorreto": "\"Venha você também jogar o game mais insano e louco de todos os tempos!\""
+    }
+  ],
+  "glossario_microcopia": [
+    { "chave": "Iniciar Jogo", "valor": "Iniciar Partida" },
+    { "chave": "Configurações", "valor": "Opções & Acessibilidade" },
+    { "chave": "Prompt de Objeto", "valor": "[E] Inspecionar [Nome do Item]" },
+    { "chave": "Prompt de Soltura", "valor": "[E] Soltar  |  Arraste para Girar" },
+    { "chave": "Alerta de Tempo", "valor": "TEMPO ESGOTADO" }
+  ]
+}

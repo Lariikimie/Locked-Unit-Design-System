@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Jogo — Locked Unit | Pingado Studios</title>
+  <meta name="description" content="Conheça a história, mecânicas e estrutura das duas fases do Vertical Slice de Locked Unit: Escape Room Horror desenvolvido pela Pingado Studios.">
+  <link rel="icon" type="image/png" href="assets/img/logo-pingado.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO & NAVEGAÇÃO -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/img/logo-pingado.png" alt="Logo Pingado Studios" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-name">Pingado Studios</span>
+          <span class="brand-sub">Locked Unit Portal</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="locked-unit.html" class="nav-link active">O Jogo</a></li>
+          <li><a href="design-system.html" class="nav-link">Design System</a></li>
+          <li><a href="media-kit.html" class="nav-link">Mídia Kit</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="admin/" class="nav-admin-btn"><span>⚙</span> Admin CMS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-wrapper">
+
+    <!-- HERO DO JOGO -->
+    <section class="hero-section" style="padding-top: var(--space-5);">
+      <div class="voice-badge voice-interfone">Voz do Depósito • Lucas</div>
+      <h1 class="hero-title">LOCKED <span>UNIT</span></h1>
+      <p class="hero-tagline">
+        Uma experiência intensa de Escape Room Horror ambientada na periferia industrial paulista.
+        Sem armas, sem inventários mágicos: apenas o raciocínio sob o pânico e o relógio correndo.
+      </p>
+
+      <div class="interfone-quote" style="max-width: 860px; margin: var(--space-4) auto; text-align: left;">
+        "Maria... você achou mesmo que o after de ontem tinha acabado? Olhe para o relógio na parede. Trinta minutos. 
+        O Augustinho já ligou a lanterna e começou a ronda pelo pátio de containers. Ele não é de conversar com intrusos. 
+        Se você quiser voltar para o seu apartamento em Barão Geraldo, vai ter que me provar que é tão inteligente quanto dizia nos corredores da faculdade."
+      </div>
+    </section>
+
+    <!-- SINOPSE E CONTEXTO NARRATIVO -->
+    <section style="margin: var(--space-7) 0;">
+      <div class="section-header">
+        <div class="voice-badge voice-estudio">Visão Autoral Brasileira</div>
+        <h2 class="section-title">Sinopse Narrativa</h2>
+        <p class="section-desc">O terror psicológico nascido de ambientes e situações cotidianas da juventude universitária.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-5); align-items: start;">
+        <div>
+          <p style="margin-bottom: var(--space-3); color: var(--color-text-high); font-size: 1.05rem; line-height: 1.7;">
+            Maria acorda com uma forte dor de cabeça, cercada por paredes metálicas corrugadas e o cheiro sufocante de ferrugem e umidade. 
+            A última lembrança clara é de uma cervejada universitária em Campinas, música alta e risadas com amigos. 
+            Agora, ela está presa em um pátio logístico de containers desativados.
+          </p>
+          <p style="margin-bottom: var(--space-3); color: var(--color-text-medium); font-size: 0.95rem; line-height: 1.7;">
+            Através de alto-falantes espalhados pela estrutura, surge a voz de <strong>Lucas</strong> — um colega de sala introspectivo e aparentemente inofensivo, 
+            que transformou sua obsessão silenciosa por Maria em um jogo sádico de lógica e fuga. Ele espalhou pistas, códigos e itens da noite anterior pelo local, 
+            desafiando-a a provar seu valor intelectual para merecer a liberdade.
+          </p>
+          <p style="color: var(--color-text-medium); font-size: 0.95rem; line-height: 1.7;">
+            Para tornar a punição real, Lucas não desativou a segurança privada do galpão: <strong>Augustinho</strong>, um guarda noturno armado com uma lanterna de alta voltagem, 
+            percorre o pátio. Se ele avistar Maria fora de um esconderijo, não haverá diálogo.
+          </p>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--color-hazard-yellow);">
+          <div class="voice-badge voice-manual">Ficha de Produção</div>
+          <h3 class="card-title" style="font-size: 1.15rem;">Especificações do Vertical Slice</h3>
+          <ul style="list-style: none; margin-top: var(--space-3); display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <li><strong style="color: var(--color-primary-cyan);">Motor:</strong> Unity 6 (6000.4.0f1) Universal Render Pipeline (URP)</li>
+            <li><strong style="color: var(--color-primary-cyan);">Perspectiva:</strong> Primeira Pessoa com câmera estabilizada</li>
+            <li><strong style="color: var(--color-primary-cyan);">Tempo Limite Global:</strong> 30 Minutos em tempo real</li>
+            <li><strong style="color: var(--color-primary-cyan);">Escopo Entregue:</strong> 2 Fases completas e jogáveis (Cofre & Genius)</li>
+            <li><strong style="color: var(--color-primary-cyan);">Sem Combate:</strong> Furtividade, linha de visão e mecânica Gaze Freeze</li>
+            <li><strong style="color: var(--color-primary-cyan);">Acessibilidade:</strong> Slider FOV, Exposição EV, Anti-Cinetose e Áudio Legendado</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONAGENS -->
+    <section style="margin: var(--space-7) 0;">
+      <div class="section-header">
+        <div class="voice-badge voice-manual">Relações Diegéticas</div>
+        <h2 class="section-title">Personagens Principais</h2>
+        <p class="section-desc">A dinâmica de poder e sobrevivência dentro do complexo de containers.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="voice-badge voice-estudio">Protagonista</div>
+          <h3 class="card-title">Maria (A Jogadora)</h3>
+          <p style="color: var(--color-text-medium); font-size: 0.92rem; line-height: 1.6;">
+            Estudante universitária de 21 anos. Determinada, astuta, porém fisicamente vulnerável. Não possui armas nem poderes especiais. 
+            Sua sobrevivência depende exclusivamente de sua percepção ambiental, capacidade de conectar pistas desconexas e manter a calma sob pressão de tempo.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="voice-badge voice-interfone">O Arquiteto</div>
+          <h3 class="card-title">Lucas (A Voz do Interfone)</h3>
+          <p style="color: var(--color-text-medium); font-size: 0.92rem; line-height: 1.6;">
+            Colega de faculdade que orquestrou o confinamento. Controlador e manipulador, ele não se expõe fisicamente, mas monitora Maria por câmeras de segurança. 
+            Comunica-se por interfones estalados, alternando entre incentivos cínicos, desdém e dicas sarcásticas quando o tempo está esgotando.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="voice-badge voice-interfone" style="background: rgba(255, 42, 42, 0.2); color: var(--color-alert-red);">A Ameaça Física</div>
+          <h3 class="card-title">Augustinho (O Guarda)</h3>
+          <p style="color: var(--color-text-medium); font-size: 0.92rem; line-height: 1.6;">
+            O vigilante terceirizado da firma de segurança patrimonial. Munido de passos pesados e lanterna penetrante. 
+            Na Fase 2, surge do lado de fora da guarita envidraçada; a jogadora deve encará-lo nos olhos para paralisar seu passo antes que arrombe a porta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALHAMENTO DAS DUAS FASES DO VERTICAL SLICE -->
+    <section style="margin: var(--space-7) 0;">
+      <div class="section-header">
+        <div class="voice-badge voice-manual">Estrutura de Fases</div>
+        <h2 class="section-title">O Vertical Slice de Duas Fases</h2>
+        <p class="section-desc">Duas experiências de puzzle de naturezas contrastantes: dedução lógica e memória rítmica sob vigilância.</p>
+      </div>
+
+      <!-- FASE 1 -->
+      <div class="card" style="margin-bottom: var(--space-5); padding: var(--space-5);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-3);">
+          <div>
+            <span class="badge-key" style="font-size: 0.9rem; padding: 4px 10px;">FASE 01</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; text-transform: uppercase; margin-top: 6px; color: var(--color-text-high);">
+              A Cela de Containers & O Cofre Digital
+            </h3>
+          </div>
+          <div class="voice-badge voice-manual">Puzzle Investigativo 3D</div>
+        </div>
+
+        <p style="color: var(--color-text-medium); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--space-4);">
+          Na Fase 1, Maria deve explorar um container trancado e a área de transição anexa. O objetivo é desvendar a combinação de 7 dígitos de um cofre digital robusto. 
+          A jogadora utiliza o sistema de <strong>Inspeção 3D em 360 Graus</strong> (<kbd class="badge-key">E</kbd>), pegando objetos deixados por Lucas — como garrafas de bebidas, 
+          copos descartáveis com marcas de batom, ingressos rasgados de festa e bilhetes manuscritos. Cada item traz fragmentos de datas e números da festa universitária. 
+          Ao combinar as pistas em ordem cronológica, descobre-se o código <strong>2341857</strong>, liberando a chave mestra e o alicate corta-fios.
+        </p>
+
+        <!-- ESPAÇO PARA PRINT DA FASE 1 -->
+        <div class="image-placeholder-box">
+          <div class="placeholder-icon">📷</div>
+          <div class="placeholder-title">Print / Arte da Fase 1: Cela e Inspeção 3D</div>
+          <div class="placeholder-desc">Insira aqui a captura de tela da inspeção de itens 3D e do cofre numérico (Caminho sugerido: assets/img/uploads/fase1-cofre.png)</div>
+        </div>
+      </div>
+
+      <!-- FASE 2 -->
+      <div class="card" style="padding: var(--space-5);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-3);">
+          <div>
+            <span class="badge-key" style="font-size: 0.9rem; padding: 4px 10px; background: rgba(240, 182, 4, 0.15); color: var(--color-hazard-yellow); border-color: var(--color-hazard-yellow);">FASE 02</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; text-transform: uppercase; margin-top: 6px; color: var(--color-text-high);">
+              A Sala de Segurança & O Totem Genius (5 Estágios)
+            </h3>
+          </div>
+          <div class="voice-badge voice-interfone">Memória & Gaze Freeze</div>
+        </div>
+
+        <p style="color: var(--color-text-medium); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--space-4);">
+          Maria alcança a guarita envidraçada de segurança e depara-se com um console industrial modificado por Lucas contendo 5 botões luminosos: 
+          <strong>Azul Elétrico (#0072F5)</strong>, <strong>Laranja Vibrante (#FF7A00)</strong>, <strong>Roxo Neon (#A020F0)</strong>, 
+          <strong>Amarelo Intenso (#FFD60A)</strong> e <strong>Magenta Vibrante (#FF3CAC)</strong>.
+          O enigma consiste em reproduzir 5 sequências de complexidade crescente (de 3 a 7 pulsos de memória).
+        </p>
+
+        <p style="color: var(--color-text-medium); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--space-4);">
+          O grande twist de tensão: enquanto a sequência é reproduzida, o patrulheiro <strong>Augustinho</strong> marcha do lado de fora da grande janela de vidro. 
+          A jogadora precisa dividir sua atenção: se continuar olhando apenas para os botões, Augustinho alcança a porta e invade. Para impedir sua aproximação, 
+          Maria deve aplicar a mecânica <strong>Gaze Freeze</strong> (olhar diretamente nos olhos de Augustinho através do vidro para paralisar seu passo temporariamente), 
+          gerenciando a memória dos padrões coloridos e a vigilância externa simultaneamente.
+        </p>
+
+        <!-- ESPAÇO PARA PRINT DA FASE 2 -->
+        <div class="image-placeholder-box">
+          <div class="placeholder-icon">📷</div>
+          <div class="placeholder-title">Print / Arte da Fase 2: Totem Genius e Janela de Vigilância</div>
+          <div class="placeholder-desc">Insira aqui a captura de tela do painel Genius e da silhueta de Augustinho na janela (Caminho sugerido: assets/img/uploads/fase2-genius.png)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section style="text-align: center; margin: var(--space-7) 0;">
+      <h2 style="font-family: var(--font-heading); font-size: 2rem; text-transform: uppercase; margin-bottom: var(--space-3);">
+        Quer entender como construímos as interfaces e regras de jogo?
+      </h2>
+      <div class="hero-actions" style="margin-top: var(--space-4);">
+        <a href="design-system.html" class="btn btn-primary">Ver Design System Completo</a>
+        <a href="media-kit.html" class="btn btn-outline">Baixar Mídia Kit</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <p style="color: var(--color-text-high); font-weight: 600;">Pingado Studios © 2026 — Locked Unit</p>
+        <p style="font-size: 0.8rem; margin-top: 4px;">Centro Universitário Senac Santo Amaro • Bacharelado em Jogos Digitais</p>
+        <p style="font-size: 0.8rem; color: var(--color-text-muted);">Orientação: Profª. Beatriz Blanco (Design de Interface) & Profª. Eliana Hdib</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="locked-unit.html">O Jogo</a></li>
+        <li><a href="design-system.html">Design System</a></li>
+        <li><a href="media-kit.html">Mídia Kit</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="admin/">Admin CMS</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

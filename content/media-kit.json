@@ -1,0 +1,40 @@
+{
+  "ficha_tecnica": {
+    "jogo": "Locked Unit",
+    "subtitulo": "Escape Room Horror",
+    "estudio": "Pingado Studios",
+    "plataforma": "PC (Windows)",
+    "engine": "Unity 6 (URP)",
+    "genero": "Escape Room Horror / Suspense em Primeira Pessoa",
+    "classificacao": "16+ (Parâmetros do Ministério da Justiça e Segurança Pública)",
+    "idioma": "Português do Brasil (Vozes e Legendas)",
+    "duracao": "Aproximadamente 30 minutos (Vertical Slice)",
+    "instituicao": "Centro Universitário Senac – Campus Santo Amaro (SP)",
+    "contato_imprensa": "pingadostudios@gmail.com"
+  },
+  "descricoes": {
+    "uma_frase": "Um escape room de horror em primeira pessoa onde uma universitária precisa desvendar os segredos de um depósito de containers antes que 30 minutos se esgotem — enquanto é vigiada por um patrulheiro implacável.",
+    "curta_50_palavras": "Em Locked Unit, você acorda presa em um depósito industrial após uma festa universitária. Sem armas para lutar, seu único caminho é explorar containers escuros, inspecionar pistas em 3D e decifrar enigmas sob um cronômetro implacável de 30 minutos, enquanto foge da perseguição do guarda Augustinho.",
+    "completa_150_palavras": "Locked Unit é uma experiência curta e intensa de Escape Room Horror desenvolvida pela Pingado Studios no Senac Santo Amaro. Assumindo o papel de Maria, a jogadora desperta desorientada em um complexo de containers preparado meticulosamente pelo sequestrador Lucas, um colega de faculdade obcecado por ela. Para escapar viva, Maria deve conectar fragmentos da festa da noite anterior deixados no pátio, inspecionar itens em 3D em 360 graus, abrir um cofre digital e superar um desafio rítmico de memória e vigilância contra o segurança Augustinho. O projeto destaca-se por sua identidade urbana brasileira, mecânicas táteis de Game Juice, atmosfera de suspense sem combate e um conjunto integral de acessibilidade que inclui modos contra cinetose, fotossensibilidade e calibração de luminosidade."
+  },
+  "destaques": [
+    "Horror sem Combate: A sobrevivência depende exclusivamente de raciocínio, discrição e gerenciamento de linha de visão.",
+    "Pressão Real de 30 Minutos: O relógio global não perdoa erros e intensifica a pulsação sonora na reta final.",
+    "Ambientação Brasileira: Cenários inspirados em repúblicas estudantis e galpões periféricos de Campinas e São Paulo.",
+    "Dois Puzzles de Natureza Distinta: Investigação lógica de cofre (Fase 1) e desafio de memória com vigilância pela janela (Fase 2).",
+    "Design Universal e Acessibilidade: Módulos dedicados contra cinetose (Câmera Confortável), redução de efeitos visuais, brilho amplo e legendas completas."
+  ],
+  "equipe": [
+    {
+      "nome": "Larissa Kimie Ito Vieira Cassiano",
+      "funcao": "Game Designer Líder, UI/UX Designer, Programadora de Sistemas, Roteirista e Sonoplasta",
+      "email": "Larissa_kimie@hotmail.com"
+    },
+    {
+      "nome": "Helen Rayssa Santos Alves",
+      "funcao": "Technical Artist, Modeladora 3D de Cenários e Props, e Programadora da Inteligência Artificial",
+      "email": "helenrayssaalves@gmail.com"
+    }
+  ],
+  "orientacao": "Profª. Beatriz Blanco (Design de Interface) e Profª. Eliana Hdib (Orientadora Acadêmica Senac)"
+}
