@@ -258,12 +258,21 @@
       </div>
       <div class="modal-body">
         <p style="font-size: 0.88rem; color: var(--builder-text-muted); line-height: 1.5; margin-bottom: 14px;">
-          Para que você e a Helen possam salvar alterações diretamente no repositório, insira o seu 
-          <strong>Personal Access Token (classic)</strong> com a permissão <code style="color: var(--builder-accent);">repo</code>.
+          Para que você e a Helen possam salvar alterações diretamente no repositório, é necessário um 
+          <strong>Personal Access Token (classic)</strong> com a permissão <code style="color: var(--builder-accent);">repo</code> marcada.
         </p>
 
+        <div style="background: rgba(0, 210, 255, 0.08); border: 1px solid rgba(0, 210, 255, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 14px;">
+          <p style="font-size: 0.82rem; color: var(--builder-text); margin-bottom: 8px;">
+            ⚡ <strong>Atalho de 1 Clique:</strong> Abra o GitHub pelo link abaixo com a permissão <code>repo</code> já selecionada automaticamente:
+          </p>
+          <a href="https://github.com/settings/tokens/new?description=Pingado+Builder+Token&scopes=repo" target="_blank" class="tool-btn" style="width: 100%; justify-content: center; background: var(--builder-accent); color: #0a0d12; font-weight: 700; text-decoration: none;">
+            ✨ Gerar Token com Permissão 'repo' no GitHub ↗
+          </a>
+        </div>
+
         <div class="form-field">
-          <label class="form-label" for="githubTokenInput">Token Pessoal (PAT)</label>
+          <label class="form-label" for="githubTokenInput">Cole o Token Gerado (começa com ghp_...)</label>
           <input type="password" id="githubTokenInput" class="form-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
         </div>
 

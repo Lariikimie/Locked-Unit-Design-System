@@ -635,6 +635,7 @@ async function publishToGitHub() {
     return;
   }
 
+  const cleanToken = state.config.token.trim();
   const publishBtn = document.getElementById('publishBtn');
   const originalHtml = publishBtn.innerHTML;
   publishBtn.disabled = true;
@@ -652,7 +653,7 @@ async function publishToGitHub() {
     let sha = null;
     const getRes = await fetch(apiUrl, {
       headers: {
-        'Authorization': `token ${state.config.token}`,
+        'Authorization': `Bearer ${cleanToken}`,
         'Accept': 'application/vnd.github.v3+json'
       }
     });
@@ -660,6 +661,9 @@ async function publishToGitHub() {
     if (getRes.ok) {
       const getData = await getRes.json();
       sha = getData.sha;
+    } else if (getRes.status === 403 || getRes.status === 401) {
+      const errJson = await getRes.json().catch(() => ({}));
+      throw new Error(errJson.message || 'Token sem permissão para acessar o repositório.');
     } else if (getRes.status !== 404) {
       throw new Error(`Erro ao checar arquivo no repositório: ${getRes.statusText}`);
     }
@@ -671,7 +675,7 @@ async function publishToGitHub() {
     const putRes = await fetch(apiUrl, {
       method: 'PUT',
       headers: {
-        'Authorization': `token ${state.config.token}`,
+        'Authorization': `Bearer ${cleanToken}`,
         'Content-Type': 'application/json',
         'Accept': 'application/vnd.github.v3+json'
       },
@@ -684,7 +688,7 @@ async function publishToGitHub() {
     });
 
     if (!putRes.ok) {
-      const errData = await putRes.json();
+      const errData = await putRes.json().catch(() => ({}));
       throw new Error(errData.message || 'Erro ao publicar no GitHub.');
     }
 
@@ -693,7 +697,12 @@ async function publishToGitHub() {
 
   } catch (err) {
     console.error("Falha ao publicar:", err);
-    alert(`Erro ao publicar no GitHub: ${err.message}\nVerifique se o token tem permissão de 'repo'.`);
+    if (err.message && (err.message.includes('Resource not accessible') || err.message.includes('Bad credentials') || err.message.includes('permissão'))) {
+      alert(`⚠️ Permissão do Token Insuficiente:\n\n${err.message}\n\nO token atual não tem a permissão 'repo' para gravar no repositório.\nVamos abrir a tela para você gerar um token novo com 1 clique!`);
+      openTokenModal();
+    } else {
+      alert(`Erro ao publicar no GitHub: ${err.message}`);
+    }
     showToast('Falha na publicação.', 'error');
   } finally {
     publishBtn.disabled = false;
