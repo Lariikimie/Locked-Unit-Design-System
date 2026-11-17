@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initCopyButtons();
   initSidebarSpy();
+  initMobileMenu();
 });
 
 // Toast de Notificação
@@ -95,5 +96,34 @@ function initSidebarSpy() {
         link.classList.add('active');
       }
     });
+  });
+}
+
+// Menu Hambúrguer Mobile
+function initMobileMenu() {
+  const toggleBtn = document.querySelector('.nav-toggle-btn');
+  const navMenu = document.querySelector('.nav-menu');
+  if (!toggleBtn || !navMenu) return;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleBtn.classList.toggle('open');
+    navMenu.classList.toggle('mobile-open');
+  });
+
+  // Fecha o menu ao clicar em qualquer link
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggleBtn.classList.remove('open');
+      navMenu.classList.remove('mobile-open');
+    });
+  });
+
+  // Fecha o menu ao clicar fora dele
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      toggleBtn.classList.remove('open');
+      navMenu.classList.remove('mobile-open');
+    }
   });
 }

@@ -167,6 +167,9 @@ function injectIframeStyles(iframe) {
       style = doc.createElement('style');
       style.id = 'builder-injected-style';
       style.textContent = `
+        body {
+          touch-action: manipulation !important;
+        }
         .builder-hover-target {
           outline: 2px dashed rgba(0, 210, 255, 0.5) !important;
           outline-offset: 3px !important;
@@ -263,12 +266,21 @@ function selectElement(el) {
   el.classList.add('builder-selected-target');
   el.classList.remove('builder-hover-target');
 
-  // Abre a gaveta
+  // Abre a gaveta / Bottom sheet no mobile
   const drawer = document.getElementById('propertiesDrawer');
   drawer.classList.add('open');
 
   // Popula os dados do elemento na gaveta
   populateDrawer(el);
+
+  // No celular, centraliza o elemento na área visível acima da bottom sheet
+  if (window.innerWidth <= 768) {
+    setTimeout(() => {
+      try {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (err) {}
+    }, 180);
+  }
 }
 
 // Desmarca elemento e fecha a gaveta

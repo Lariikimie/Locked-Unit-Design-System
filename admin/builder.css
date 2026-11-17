@@ -509,3 +509,137 @@ body {
   border-color: var(--builder-alert);
   color: #ff9999;
 }
+
+
+/* ==========================================================================
+   ADAPTAÇÃO MOBILE & BOTTOM SHEET (ESTILO CARRD MOBILE)
+   ========================================================================== */
+
+.drawer-drag-handle {
+  display: none;
+  width: 42px;
+  height: 5px;
+  background: var(--builder-border);
+  border-radius: 9999px;
+  margin: 8px auto 2px;
+}
+
+@media (max-width: 768px) {
+  /* Toolbar Compacta */
+  .builder-topbar {
+    height: 50px;
+    padding: 0 8px;
+  }
+
+  .topbar-group {
+    gap: 6px;
+  }
+
+  .brand-badge {
+    padding-right: 6px;
+  }
+
+  .brand-badge span,
+  .brand-badge {
+    font-size: 0; /* Oculta texto mantendo o ícone */
+  }
+
+  .brand-badge img {
+    margin: 0;
+  }
+
+  .page-selector {
+    max-width: 125px;
+    font-size: 0.75rem;
+    padding: 5px 6px;
+  }
+
+  /* Oculta Alternador de Visualização Desktop/Mobile no Celular */
+  #viewToggle {
+    display: none !important;
+  }
+
+  .tool-btn {
+    padding: 6px 9px;
+    font-size: 0.8rem;
+  }
+
+  .btn-publish span {
+    margin-right: 0;
+  }
+
+  /* Canvas sem bordas extras no celular */
+  .canvas-container {
+    padding: 0;
+  }
+
+  .canvas-frame-wrap {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* GAVETA CONVERTIDA EM BOTTOM SHEET (FOLHA DESLIZANTE INFERIOR) */
+  .properties-drawer {
+    width: 100%;
+    max-height: 80vh;
+    height: auto;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-left: none;
+    border-top: 1px solid var(--builder-border);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.9);
+    transform: translateY(105%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .properties-drawer.open {
+    transform: translateY(0);
+  }
+
+  .drawer-drag-handle {
+    display: block;
+  }
+
+  .drawer-header {
+    padding: 10px 16px;
+  }
+
+  .drawer-content {
+    max-height: calc(80vh - 130px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 14px;
+  }
+
+  .drawer-footer {
+    padding: 10px 14px;
+  }
+
+  .drawer-footer .tool-btn {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Chips de Cor Maiores para Toque */
+  .color-picker-chips {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .color-chip {
+    min-height: 38px;
+  }
+
+  /* Modais em Tela Cheia no Celular */
+  .builder-modal {
+    width: 95%;
+    max-height: 88vh;
+  }
+
+  .component-grid {
+    grid-template-columns: 1fr;
+  }
+}
