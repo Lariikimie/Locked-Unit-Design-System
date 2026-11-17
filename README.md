@@ -97,22 +97,26 @@ Para que Helen consiga acessar o `/admin/` e editar conteúdos:
 
 ---
 
-## 🔑 Como Usar o Editor Visual (Sveltia CMS no `/admin/`)
+## 🔑 Como Usar o Editor Visual (Estilo Carrd no `/admin/`)
 
-O **Sveltia CMS** permite que você e a Helen editem todos os textos, tokens, releases e subam imagens sem precisar abrir código ou instalar nada no computador:
+O **Pingado Builder** é um editor visual *in-context* inspirado na experiência do **Carrd** ([carrd.com/docs/building](https://carrd.com/docs/building)), permitindo que você e a Helen editem o site ao vivo com um clique:
 
-1. Acesse o GitHub: [https://github.com/settings/tokens](https://github.com/settings/tokens)
-2. Clique em **Generate new token** -> **Generate new token (classic)**.
-3. No campo **Note**, digite: `Sveltia CMS Token`.
-4. Em **Expiration**, escolha o prazo desejado (ex: 90 dias ou No expiration).
-5. Na lista de permissões (**Select scopes**), marque apenas a caixa:
-   - ✅ **`repo`** (Full control of private repositories / Public repositories)
-6. Role até o final e clique no botão verde **Generate token**.
-7. Copie o token gerado (começa com `ghp_...`).
-8. Acesse a URL do editor no navegador:
-   👉 **`https://lariikimie.github.io/Locked-Unit-Design-System/admin/`**
-9. Cole o seu token no campo de autenticação e confirme.
-10. Pronto! Você verá as 7 seções organizadas em português. Ao alterar qualquer texto ou subir uma foto e clicar em **Salvar**, o CMS faz um commit automático no GitHub e o GitHub Pages atualiza o site sozinho!
+1. **Gere seu Token no GitHub (Apenas 1 vez):**
+   - Acesse: [https://github.com/settings/tokens](https://github.com/settings/tokens)
+   - Clique em **Generate new token** -> **Generate new token (classic)**.
+   - Nome: `Pingado Builder Token`.
+   - Marque a permissão: ✅ **`repo`**.
+   - Copie o token gerado (`ghp_...`).
+
+2. **Como Editar no Construtor Visual:**
+   - Acesse no navegador: 👉 **`https://lariikimie.github.io/Locked-Unit-Design-System/admin/`**
+   - Clique no ícone de chave 🔑 no topo e cole o seu token (ele ficará salvo no seu navegador).
+   - **Canvas Ao Vivo:** Navegue pelo site como ele realmente é.
+   - **Edição Direta:** Clique em qualquer título, parágrafo, citação de interfone ou card para abrir a **Gaveta de Propriedades (Carrd Drawer)** na lateral. Ou dê **duplo clique** para digitar direto na página!
+   - **Gaveta Lateral:** Altere textos, aplique tokens de cores com 1 clique, troque fontes (*Oswald*, *Barlow Condensed*, *Inter*, etc.) ou duplique/exclua blocos.
+   - **Botão `+ Adicionar`:** Insira novos parágrafos, títulos, citações de rádio, cards de informação, swatches de cor ou blocos de imagem.
+   - **Alternador Desktop / Celular:** Visualize instantaneamente como a página fica em smartphones.
+   - **Publicar no GitHub (🚀):** Clique no botão amarelo no topo. O builder efetua o commit direto na branch `main` e o GitHub Pages atualiza o site automaticamente em segundos!
 
 ---
 

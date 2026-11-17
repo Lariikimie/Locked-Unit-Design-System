@@ -4,18 +4,279 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Editor Visual | Pingado Studios (Admin)</title>
+  <title>Visual Site Builder | Pingado Studios (Admin)</title>
   <link rel="icon" type="image/png" href="../assets/img/logo-pingado.png" />
-  <style>
-    body {
-      background-color: #0a0d12;
-      color: #f5f7fa;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="builder.css" />
 </head>
 <body>
-  <!-- Sveltia CMS: Editor Visual sem necessidade de servidor Node/OAuth -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+
+  <!-- BARRA DE FERRAMENTAS SUPERIOR (ESTILO CARRD) -->
+  <header class="builder-topbar">
+    <div class="topbar-group">
+      <div class="brand-badge">
+        <img src="../assets/img/logo-pingado.png" alt="Logo" />
+        <span>Pingado</span> Builder
+      </div>
+
+      <!-- Seletor de Página -->
+      <select id="pageSelector" class="page-selector" title="Selecionar página para editar">
+        <option value="index.html">Início (index.html)</option>
+        <option value="locked-unit.html">O Jogo (locked-unit.html)</option>
+        <option value="design-system.html">Design System (design-system.html)</option>
+        <option value="media-kit.html">Mídia Kit (media-kit.html)</option>
+        <option value="sobre.html">Sobre o Estúdio (sobre.html)</option>
+      </select>
+
+      <!-- Botão Adicionar Elemento (+) -->
+      <button id="addBtn" class="tool-btn" title="Adicionar novo elemento (Carrd Element Panel)">
+        <span style="font-size: 1.1rem; font-weight: 700;">+</span> Adicionar
+      </button>
+
+      <!-- Desfazer / Refazer -->
+      <div style="display: flex; gap: 4px;">
+        <button id="undoBtn" class="tool-btn tool-icon-btn" title="Desfazer (Ctrl+Z)" disabled>↩</button>
+        <button id="redoBtn" class="tool-btn tool-icon-btn" title="Refazer (Ctrl+Y)" disabled>↪</button>
+      </div>
+    </div>
+
+    <!-- Controles Centrais / Visualização -->
+    <div class="topbar-group">
+      <button id="viewToggle" class="tool-btn" title="Alternar entre Desktop e Simulação Celular">
+        <span>💻</span> Desktop
+      </button>
+    </div>
+
+    <!-- Ações Finais (Configuração e Publicação) -->
+    <div class="topbar-group">
+      <a href="../" target="_blank" class="tool-btn" title="Visualizar site ao vivo em nova aba">
+        <span>↗</span> Ver Site
+      </a>
+
+      <button id="tokenBtn" class="tool-btn tool-icon-btn" title="Configurar Token do GitHub">
+        <span>🔑</span>
+      </button>
+
+      <button id="publishBtn" class="tool-btn btn-publish" title="Salvar e publicar alterações diretamente no repositório GitHub">
+        <span>🚀</span> Publicar no GitHub
+      </button>
+    </div>
+  </header>
+
+  <!-- WORKSPACE & CANVAS CENTRAL -->
+  <main class="builder-workspace">
+    <div class="canvas-container">
+      <div class="canvas-frame-wrap">
+        <iframe id="siteIframe" class="site-iframe" title="Visualizador do Site"></iframe>
+      </div>
+    </div>
+
+    <!-- GAVETA LATERAL DE PROPRIEDADES (SLIDE-IN DRAWER ESTILO CARRD) -->
+    <aside id="propertiesDrawer" class="properties-drawer">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span id="drawerElementTag" class="drawer-element-tag">ELEMENTO</span>
+          <span id="drawerElementLabel" class="drawer-element-label">Propriedades</span>
+        </div>
+        <button id="drawerCloseBtn" class="drawer-close-btn" title="Fechar painel (Esc)">✕</button>
+      </div>
+
+      <!-- Abas Carrd -->
+      <div class="drawer-tabs">
+        <div class="drawer-tab active" data-tab="tabContent">Conteúdo</div>
+        <div class="drawer-tab" data-tab="tabAppearance">Aparência</div>
+        <div class="drawer-tab" data-tab="tabSettings">Configurações</div>
+      </div>
+
+      <!-- Conteúdo das Abas -->
+      <div class="drawer-content">
+
+        <!-- ABA 1: CONTEÚDO -->
+        <div id="tabContent" class="tab-pane active">
+          <div class="form-field">
+            <label class="form-label" for="fieldContentText">Texto / Conteúdo</label>
+            <textarea id="fieldContentText" class="form-textarea" placeholder="Edite o texto aqui..."></textarea>
+          </div>
+
+          <div id="fieldUrlWrap" class="form-field" style="display: none;">
+            <label class="form-label" for="fieldContentUrl">Link (Href) / Caminho da Imagem (Src)</label>
+            <input type="text" id="fieldContentUrl" class="form-input" placeholder="https://... ou assets/img/..." />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Estilo de Voz Semântica</label>
+            <p style="font-size: 0.75rem; color: var(--builder-text-muted); margin-bottom: 8px;">
+              Clique para injetar uma das vozes oficiais no elemento:
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+              <button type="button" class="tool-btn" style="font-size: 0.75rem; border-color: rgba(255,42,42,0.4); color: #ff6666;" onclick="document.getElementById('fieldContentText').value = '&quot;Maria! O tempo está acabando...&quot;'; document.getElementById('fieldContentText').dispatchEvent(new Event('input'));">
+                🔴 Voz Interfone
+              </button>
+              <button type="button" class="tool-btn" style="font-size: 0.75rem; border-color: rgba(0,210,255,0.4); color: #00d2ff;" onclick="document.getElementById('fieldContentText').value = 'Especificação técnica de interface e UX.'; document.getElementById('fieldContentText').dispatchEvent(new Event('input'));">
+                🔵 Voz Manual
+              </button>
+              <button type="button" class="tool-btn" style="font-size: 0.75rem; border-color: rgba(240,182,4,0.4); color: #f0b604;" onclick="document.getElementById('fieldContentText').value = 'Pingado Studios: jogos com identidade brasileira.'; document.getElementById('fieldContentText').dispatchEvent(new Event('input'));">
+                🟡 Voz Estúdio
+              </button>
+              <button type="button" class="tool-btn" style="font-size: 0.75rem; border-color: rgba(160,32,240,0.4); color: #d17bff;" onclick="document.getElementById('fieldContentText').value = 'Locked Unit é um escape room em primeira pessoa.'; document.getElementById('fieldContentText').dispatchEvent(new Event('input'));">
+                🟣 Voz Imprensa
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABA 2: APARÊNCIA -->
+        <div id="tabAppearance" class="tab-pane">
+          <div class="form-field">
+            <label class="form-label" for="fieldAppearanceFont">Família Tipográfica</label>
+            <select id="fieldAppearanceFont" class="form-select">
+              <option value="'Inter', sans-serif">Inter (Corpo de Texto / Legendas)</option>
+              <option value="'Oswald', sans-serif">Oswald (Títulos / Menus / Cofre)</option>
+              <option value="'Barlow Condensed', sans-serif">Barlow Condensed (Cronômetro HUD)</option>
+              <option value="'Rubik Dirt', cursive">Rubik Dirt (Logo Locked Unit)</option>
+              <option value="'Kalam', cursive">Kalam (Bilhetes Manuscritos)</option>
+              <option value="'JetBrains Mono', monospace">JetBrains Mono (Código / Teclas)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="fieldAppearanceFontSize">Tamanho da Fonte (px)</label>
+            <input type="number" id="fieldAppearanceFontSize" class="form-input" min="10" max="140" value="16" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Alinhamento do Texto</label>
+            <div style="display: flex; gap: 4px;">
+              <button type="button" class="tool-btn" data-align="left" style="flex: 1; justify-content: center;">Esquerda</button>
+              <button type="button" class="tool-btn" data-align="center" style="flex: 1; justify-content: center;">Centro</button>
+              <button type="button" class="tool-btn" data-align="right" style="flex: 1; justify-content: center;">Direita</button>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Paleta de Cores & Tokens Rápidos</label>
+            <p style="font-size: 0.75rem; color: var(--builder-text-muted); margin-bottom: 6px;">
+              Clique em um token para aplicar ao elemento selecionado:
+            </p>
+            <div id="colorChipsContainer" class="color-picker-chips">
+              <!-- Gerado dinamicamente via builder.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ABA 3: CONFIGURAÇÕES -->
+        <div id="tabSettings" class="tab-pane">
+          <div class="form-field">
+            <label class="form-label" for="fieldSettingsId">ID do Elemento</label>
+            <input type="text" id="fieldSettingsId" class="form-input" placeholder="ex: snippet-pitch, secao-marca" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="fieldSettingsClass">Classes CSS</label>
+            <input type="text" id="fieldSettingsClass" class="form-input" placeholder="ex: card, btn btn-primary" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="fieldSettingsDataCopy">Atributo data-copy (Botões de Cópia)</label>
+            <input type="text" id="fieldSettingsDataCopy" class="form-input" placeholder="Texto que será copiado no clique" />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Rodapé da Gaveta -->
+      <div class="drawer-footer">
+        <button id="btnMoveUp" class="tool-btn" title="Mover para cima">▲ Subir</button>
+        <button id="btnMoveDown" class="tool-btn" title="Mover para baixo">▼ Descer</button>
+        <button id="btnDuplicate" class="tool-btn" title="Duplicar elemento">📋 Duplicar</button>
+        <button id="btnDelete" class="tool-btn" style="color: var(--builder-alert); border-color: rgba(255,42,42,0.3);" title="Excluir elemento">🗑️</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- MODAL: ADICIONAR ELEMENTOS (+) ESTILO CARRD -->
+  <div id="addModal" class="builder-modal-backdrop">
+    <div class="builder-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Adicionar Novo Elemento</h3>
+        <button class="drawer-close-btn modal-close-btn">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="component-grid">
+          <div class="component-card" data-add-component="text">
+            <span class="component-icon">📄</span>
+            <span class="component-name">Parágrafo</span>
+            <span class="component-desc">Bloco de texto padrão para descrições e narrativas.</span>
+          </div>
+
+          <div class="component-card" data-add-component="heading">
+            <span class="component-icon">🏷️</span>
+            <span class="component-name">Título de Seção</span>
+            <span class="component-desc">Cabeçalho com tipografia Oswald industrial.</span>
+          </div>
+
+          <div class="component-card" data-add-component="interfone">
+            <span class="component-icon">📻</span>
+            <span class="component-name">Citação Interfone</span>
+            <span class="component-desc">Caixa com borda vermelha e voz diegética de Lucas.</span>
+          </div>
+
+          <div class="component-card" data-add-component="card">
+            <span class="component-icon">🃏</span>
+            <span class="component-name">Card de Informação</span>
+            <span class="component-desc">Container modular com borda metálica e badge.</span>
+          </div>
+
+          <div class="component-card" data-add-component="swatch">
+            <span class="component-icon">🎨</span>
+            <span class="component-name">Token de Cor</span>
+            <span class="component-desc">Card de cor com botão de cópia de HEX integrado.</span>
+          </div>
+
+          <div class="component-card" data-add-component="media">
+            <span class="component-icon">📷</span>
+            <span class="component-name">Espaço para Print</span>
+            <span class="component-desc">Placeholder pontilhado para fotos e artes conceituais.</span>
+          </div>
+
+          <div class="component-card" data-add-component="button">
+            <span class="component-icon">🔘</span>
+            <span class="component-name">Botão de Ação</span>
+            <span class="component-desc">Botão estilizado com links ou ações do usuário.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: CONFIGURAÇÃO DE TOKEN DO GITHUB -->
+  <div id="tokenModal" class="builder-modal-backdrop">
+    <div class="builder-modal" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Configurar Token do GitHub</h3>
+        <button class="drawer-close-btn modal-close-btn">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.88rem; color: var(--builder-text-muted); line-height: 1.5; margin-bottom: 14px;">
+          Para que você e a Helen possam salvar alterações diretamente no repositório, insira o seu 
+          <strong>Personal Access Token (classic)</strong> com a permissão <code style="color: var(--builder-accent);">repo</code>.
+        </p>
+
+        <div class="form-field">
+          <label class="form-label" for="githubTokenInput">Token Pessoal (PAT)</label>
+          <input type="password" id="githubTokenInput" class="form-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+        </div>
+
+        <p style="font-size: 0.78rem; color: var(--builder-text-muted); margin-bottom: 16px;">
+          O token fica salvo apenas no navegador local (<code style="color: var(--builder-accent);">localStorage</code>).
+        </p>
+
+        <button id="btnSaveToken" class="tool-btn btn-publish" style="width: 100%; justify-content: center;">
+          Salvar Token no Navegador
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="builder.js"></script>
 </body>
 </html>
