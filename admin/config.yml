@@ -145,10 +145,10 @@ collections:
               - { label: "Público Beneficiado", name: "publico", widget: "string" }
 
   # -------------------------------------------------------------
-  # SEÇÃO: MÍDIA KIT & PRESS RELEASE
+  # SEÇÃO: PRESS KIT & COMUNICAÇÃO DE IMPRENSA
   # -------------------------------------------------------------
-  - name: "media_kit"
-    label: "Mídia Kit"
+  - name: "press_kit"
+    label: "Press Kit"
     files:
       - file: "content/media-kit.json"
         label: "Kit de Imprensa e Ficha"

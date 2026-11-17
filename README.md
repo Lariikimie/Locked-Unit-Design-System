@@ -19,7 +19,7 @@ Locked-Unit-Design-System/
 ├── index.html              # Início: Hero, pilares e atmosfera
 ├── locked-unit.html        # O Jogo: Sinopse, personagens e Vertical Slice (Fases 1 e 2)
 ├── design-system.html      # Design System: Tokens com cópia Hex, tipografia, verbos e acessibilidade
-├── media-kit.html          # Mídia Kit: Releases copiáveis, ficha técnica e downloads de logos
+├── press-kit.html          # Press Kit: Releases copiáveis, ficha técnica e downloads de logos
 ├── sobre.html              # Sobre o Estúdio: História do café pingado, Larissa, Helen, orientadoras e ODS
 ├── .nojekyll               # Desativa Jekyll no GitHub Pages para carregar todos os diretórios
 ├── admin/
