@@ -316,17 +316,85 @@ function populateDrawer(el) {
     state.hasUnsavedChanges = true;
   };
 
-  // URL (Links ou Imagens)
-  if (el.tagName === 'A' || el.tagName === 'IMG') {
+  // URL (Links ou Imagens) e Upload do Computador
+  const isImageOrPlaceholder = el.tagName === 'IMG' || el.classList.contains('image-placeholder-box');
+  const imageUploadControls = document.getElementById('imageUploadControls');
+  const fieldImageFile = document.getElementById('fieldImageFile');
+  const btnTriggerImageUpload = document.getElementById('btnTriggerImageUpload');
+  const uploadFileInfo = document.getElementById('uploadFileInfo');
+
+  if (el.tagName === 'A' || isImageOrPlaceholder) {
     urlFieldWrap.style.display = 'block';
-    urlInput.value = el.getAttribute('href') || el.getAttribute('src') || '';
+    urlInput.value = el.getAttribute('href') || el.getAttribute('src') || (el.dataset.pendingUploadPath || '');
     urlInput.oninput = () => {
       if (el.tagName === 'A') el.setAttribute('href', urlInput.value);
       if (el.tagName === 'IMG') el.setAttribute('src', urlInput.value);
       state.hasUnsavedChanges = true;
     };
+
+    if (isImageOrPlaceholder && imageUploadControls) {
+      imageUploadControls.style.display = 'block';
+      if (uploadFileInfo) uploadFileInfo.style.display = 'none';
+
+      btnTriggerImageUpload.onclick = () => {
+        fieldImageFile.value = '';
+        fieldImageFile.click();
+      };
+
+      fieldImageFile.onchange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const sanitizedName = file.name.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+        const targetPath = `assets/img/uploads/${sanitizedName}`;
+
+        const reader = new FileReader();
+        reader.onload = (loadEvt) => {
+          const dataUrl = loadEvt.target.result;
+
+          let targetImg = el;
+          if (el.classList.contains('image-placeholder-box')) {
+            const iframe = document.getElementById('siteIframe');
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            const newImg = doc.createElement('img');
+            newImg.className = 'preview-img';
+            newImg.alt = file.name;
+            newImg.style.maxWidth = '100%';
+            newImg.style.borderRadius = '8px';
+            newImg.style.display = 'block';
+            newImg.style.margin = '16px auto';
+            el.parentNode.replaceChild(newImg, el);
+            targetImg = newImg;
+            selectElement(targetImg);
+          }
+
+          targetImg.setAttribute('src', dataUrl);
+          targetImg.dataset.pendingUploadPath = targetPath;
+          urlInput.value = targetPath;
+
+          if (uploadFileInfo) {
+            uploadFileInfo.style.display = 'block';
+            uploadFileInfo.innerHTML = `✓ <strong>${file.name}</strong> carregado!<br><span style="color:var(--builder-text-muted);">Será salvo em <code>${targetPath}</code> ao clicar em Publicar.</span>`;
+          }
+
+          state.pendingUploads = state.pendingUploads || {};
+          state.pendingUploads[targetPath] = {
+            name: sanitizedName,
+            base64: dataUrl.split(',')[1],
+            type: file.type
+          };
+
+          state.hasUnsavedChanges = true;
+          showToast(`GIF/Imagem '${file.name}' carregado no preview!`, 'success');
+        };
+        reader.readAsDataURL(file);
+      };
+    } else if (imageUploadControls) {
+      imageUploadControls.style.display = 'none';
+    }
   } else {
     urlFieldWrap.style.display = 'none';
+    if (imageUploadControls) imageUploadControls.style.display = 'none';
   }
 
   // Estilos
@@ -597,6 +665,14 @@ function updateUndoRedoButtons() {
 function getCleanDocumentHtml(doc) {
   const clone = doc.documentElement.cloneNode(true);
 
+  // Substitui data URLs locais pelo caminho relativo final de upload
+  clone.querySelectorAll('img').forEach(img => {
+    if (img.dataset.pendingUploadPath) {
+      img.setAttribute('src', img.dataset.pendingUploadPath);
+      img.removeAttribute('data-pending-upload-path');
+    }
+  });
+
   // Remove estilos e classes do builder
   const injectedStyle = clone.querySelector('#builder-injected-style');
   if (injectedStyle) injectedStyle.remove();
@@ -649,6 +725,50 @@ async function publishToGitHub() {
   const apiUrl = `https://api.github.com/repos/${state.config.repo}/contents/${filePath}`;
 
   try {
+    // 0. Se houver imagens ou GIFs locais enviados pelo usuário, sobe cada um para assets/img/uploads/ no GitHub
+    if (state.pendingUploads && Object.keys(state.pendingUploads).length > 0) {
+      showToast('Enviando arquivos de mídia para o GitHub...', 'info');
+      for (const [targetPath, uploadData] of Object.entries(state.pendingUploads)) {
+        try {
+          const imgApiUrl = `https://api.github.com/repos/${state.config.repo}/contents/${targetPath}`;
+          let imgSha = null;
+          const imgCheckRes = await fetch(imgApiUrl, {
+            headers: {
+              'Authorization': `Bearer ${cleanToken}`,
+              'Accept': 'application/vnd.github.v3+json'
+            }
+          });
+          if (imgCheckRes.ok) {
+            const imgData = await imgCheckRes.json();
+            imgSha = imgData.sha;
+          }
+
+          const putImgRes = await fetch(imgApiUrl, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `Bearer ${cleanToken}`,
+              'Content-Type': 'application/json',
+              'Accept': 'application/vnd.github.v3+json'
+            },
+            body: JSON.stringify({
+              message: `upload image: ${uploadData.name} via Pingado Builder`,
+              content: uploadData.base64,
+              sha: imgSha,
+              branch: state.config.branch
+            })
+          });
+
+          if (!putImgRes.ok) {
+            const errTxt = await putImgRes.text();
+            console.warn(`Falha ao subir imagem ${targetPath}:`, errTxt);
+          }
+        } catch (imgErr) {
+          console.warn("Falha no upload de imagem:", imgErr);
+        }
+      }
+      state.pendingUploads = {};
+    }
+
     // 1. Obtém o SHA atual do arquivo remoto
     let sha = null;
     const getRes = await fetch(apiUrl, {

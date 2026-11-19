@@ -101,6 +101,19 @@
           <div id="fieldUrlWrap" class="form-field" style="display: none;">
             <label class="form-label" for="fieldContentUrl">Link (Href) / Caminho da Imagem (Src)</label>
             <input type="text" id="fieldContentUrl" class="form-input" placeholder="https://... ou assets/img/..." />
+            
+            <!-- Upload direto de imagem ou GIF local do computador -->
+            <div id="imageUploadControls" style="margin-top: 10px; display: none;">
+              <label class="form-label" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                <span>📁 Escolher Arquivo do PC</span>
+                <span style="font-size: 0.72rem; color: var(--builder-accent);">GIF, PNG, JPG, WEBP</span>
+              </label>
+              <input type="file" id="fieldImageFile" accept="image/*,.gif" style="display: none;" />
+              <button type="button" class="tool-btn" id="btnTriggerImageUpload" style="width: 100%; justify-content: center; gap: 8px; border-color: rgba(0, 210, 255, 0.4); color: var(--builder-accent); padding: 9px 12px; font-weight: 600; background: rgba(0, 210, 255, 0.08);">
+                <span>📷 Escolher GIF / Imagem do seu Dispositivo</span>
+              </button>
+              <div id="uploadFileInfo" style="display: none; margin-top: 8px; padding: 8px 10px; background: rgba(0, 210, 255, 0.1); border-radius: 6px; font-size: 0.76rem; color: var(--builder-text); border: 1px solid rgba(0, 210, 255, 0.25); word-break: break-all;"></div>
+            </div>
           </div>
 
           <div class="form-field">
