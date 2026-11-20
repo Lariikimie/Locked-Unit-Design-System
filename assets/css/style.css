@@ -192,7 +192,15 @@ img {
   text-decoration: none;
 }
 
+.preview-img {
+  display: block;
+  margin: 16px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
 .brand-logo-img {
+
   width: 42px;
   height: 42px;
   border-radius: var(--radius-full);
