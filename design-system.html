@@ -6,7 +6,7 @@
   <meta name="description" content="Design System oficial de Locked Unit: tokens de cores copiáveis, tipografia, matriz de vozes, tabela de verbos e efeitos, componentes de HUD e diretrizes de acessibilidade.">
   <link rel="icon" type="image/png" href="assets/img/logo-pingado.png">
   <link rel="stylesheet" href="assets/css/style.css">
-<style></style></head>
+<style></style><style></style></head>
 <body>
 
   <!-- CABEÇALHO & NAVEGAÇÃO -->
@@ -43,7 +43,7 @@
   <!-- CONTEÚDO PRINCIPAL COM SIDEBAR -->
   <main class="main-wrapper">
 
-    <div style="margin-bottom: var(--space-5);">
+    <div style="margin-bottom: var(--space-5);" class="">
       <div class="voice-badge voice-manual">Documento Oficial de Engenharia de Interface</div>
       <h1 style="font-family: var(--font-heading); font-size: 2.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;" class="">
         Locked Unit <span class="">Design System</span>
@@ -57,13 +57,13 @@
       <aside class="ds-sidebar">
         <div class="ds-sidebar-title">Índice do Sistema</div>
         <ul class="ds-sidebar-nav">
-          <li><a href="#marca" class="active">01. Marca &amp; Atmosfera</a></li>
-          <li><a href="#vozes">02. Sistema de Vozes</a></li>
-          <li><a href="#tokens">03. Tokens de Cor</a></li>
-          <li><a href="#tipografia">04. Tipografia &amp; Escala</a></li>
-          <li><a href="#verbos">05. Verbos &amp; Efeitos</a></li>
-          <li><a href="#componentes">06. Componentes de HUD</a></li>
-          <li><a href="#acessibilidade">07. Acessibilidade</a></li>
+          <li class=""><a href="#marca" class="">01. Marca &amp; Atmosfera</a></li>
+          <li class=""><a href="#vozes" class="">02. Sistema de Vozes</a></li>
+          <li><a href="#tokens" class="">03. Tokens de Cor</a></li>
+          <li><a href="#tipografia" class="">04. Tipografia &amp; Escala</a></li>
+          <li><a href="#verbos" class="">05. Verbos &amp; Efeitos</a></li>
+          <li><a href="#componentes" class="active">06. Componentes de HUD</a></li>
+          <li class=""><a href="#acessibilidade" class="">07. Acessibilidade</a></li>
         </ul>
 
         <div style="margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--color-border-metal);" class="">
@@ -79,13 +79,9 @@
 
         <!-- 01. MARCA & ATMOSFERA -->
         <section id="marca" class="">
-          <div class="section-header">
-            <div class="voice-badge voice-manual">Seção 01</div>
-            <h2 class="section-title">Marca &amp; Atmosfera</h2>
-            <p class="section-desc">Princípios estéticos da Pingado Studios e a identidade visual de Locked Unit.</p>
-          </div>
+          <div class="section-header">SEÇÃO 01<br>STUDIO &amp; ATMOSFERA<br><br>Princípios da Pingado Studios e a identidade visual de Locked Unit.</div>
 
-          <p style="margin-bottom: var(--space-4); color: var(--color-text-medium); line-height: 1.7;" class="">A identidade visual de Locked Unit reflete o choque entre a modernidade fria de um depósito logístico e o calor juvenil de uma festa universitária. O design de interface opera sob o paradigma do Minimalismo Diegético: os elementos gráficos pertencem fisicamente ao espaço ou simulam instrumentos analógicos e digitais reais.</p>
+          <p style="margin-bottom: var(--space-4); color: var(--color-text-medium); line-height: 1.7;" class="">A identidade visual de Locked Unit reflete o choque entre um depósito logístico e o calor juvenil de uma festa universitária. O design de interface opera sob o paradigma do Minimalismo Diegético: os elementos gráficos pertencem fisicamente ao espaço ou simulam instrumentos analógicos e digitais reais.</p>
 
           <div class="cards-grid" style="margin: var(--space-4) 0;">
             <div class="card">
@@ -97,20 +93,16 @@
               <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">Em momentos de perseguição de Augustinho ou nos últimos 5 minutos de tempo, a informação vital é imediata e de leitura periférica rápida.</p>
             </div>
             <div class="card">
-              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 6px;" class="">Rústico vs. Tecnológico</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">Chapas metálicas desgastadas com solda oxidada contrastam com displays de 7 segmentos de LED e botões luminosos saturados.</p>
+              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 6px;" class="">TECNOLÓGICO</h4>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">Displays de 7 segmentos de LED e botões luminosos saturados.</p>
             </div>
             <div class="card">
               <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 6px;" class="">Multimodalidade Mandatória</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">Nenhuma pista ou perigo depende exclusivamente de uma cor ou de um som isolado. Sempre há forma, brilho, vibração e áudio síncronos.</p>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">Nenhuma pista ou perigo depende exclusivamente de uma cor ou de um som isolado. Sempre há forma, brilho, vibração e áudio.</p>
             </div>
           </div>
 
-          <div class="image-placeholder-box">
-            <div class="placeholder-icon">🎨</div>
-            <div class="placeholder-title">Logotipo Oficial &amp; Construção Geométrica</div>
-            <div class="placeholder-desc">Insira a imagem com a malha construtiva e variações cromáticas do logotipo (assets/img/uploads/marca-grid.png)</div>
-          </div>
+          <img class="preview-img" alt="PingadoStudios.jpeg" style="max-width: 100%; border-radius: 8px; display: block; margin: 16px auto;" src="assets/img/uploads/pingadostudios.jpeg">
         </section>
 
         <!-- 02. SISTEMA DE VOZES -->
@@ -125,9 +117,9 @@
             <div class="card" style="border-left: 4px solid var(--color-alert-red);">
               <div class="voice-badge voice-interfone">Voz Interfone (Diegética)</div>
               <h3 class="card-title">Lucas / O Sequestrador</h3>
-              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 8px;"><strong>Tom:</strong> Cínico, obsessivo, claustrofóbico e passivo-agressivo.</p>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;">Emprega gírias paulistas universitárias, frases cortantes e falsas cordialidades.</p>
-              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85rem; font-style: italic; color: #ff8a8a;">
+              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 8px;" class="">Tom: Cínico, obsessivo, e passivo-agressivo.</p>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;" class="">Emprega gírias paulistas universitárias, frases cortantes e falsas cordialidades.</p>
+              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85rem; font-style: italic; color: #ff8a8a;" class="">
                 "Achou o alicate? Que bom. Agora tenta não tremer as mãos quando o Augustinho passar pela sua porta..."
               </div>
             </div>
@@ -135,9 +127,9 @@
             <div class="card" style="border-left: 4px solid var(--color-primary-cyan);">
               <div class="voice-badge voice-manual">Voz Manual (Técnica)</div>
               <h3 class="card-title">Especificação de UX/UI</h3>
-              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 8px;" class=""><strong>Tom:</strong> Impessoal, estruturado, analítico e normativo.</p>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;">Termos universais de usabilidade, valores numéricos precisos e ausência de sentimentalismo.</p>
-              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85rem; font-family: var(--font-code); color: #80e5ff;">
+              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 8px;" class=""><strong class="">Tom:</strong> Impessoal, estruturado, analítico e normativo.</p>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;" class="">Termos universais de usabilidade, valores numéricos precisos e ausência de sentimentalismo.</p>
+              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85rem; font-family: var(--font-code); color: #80e5ff;" class="">
                 "Retículo central com raio de 4px, opacidade 70% (#F5F7FA). Reativo com QuickOutline 2px ao colidir com camada Inspectable."
               </div>
             </div>
@@ -145,9 +137,9 @@
             <div class="card" style="border-left: 4px solid var(--color-hazard-yellow);">
               <div class="voice-badge voice-estudio">Voz Estúdio (Institucional)</div>
               <h3 class="card-title">Pingado Studios</h3>
-              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 8px;"><strong>Tom:</strong> Acolhedor, autoral, ético e comprometido com acessibilidade.</p>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;">Foco na cultura brasileira, valorização do aprendizado acadêmico e transparência de processos.</p>
-              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85rem; color: #ffe880;">
+              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 8px;" class=""><strong>Tom:</strong> Acolhedor, autoral, ético e comprometido com acessibilidade.</p>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;" class="">Foco na cultura brasileira, valorização do aprendizado acadêmico e transparência de processos.</p>
+              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85rem; color: #ffe880;" class="">
                 "Nós da Pingado Studios acreditamos que o horror de qualidade nasce da aproximação com os medos reais da juventude."
               </div>
             </div>
@@ -155,9 +147,9 @@
             <div class="card" style="border-left: 4px solid #a020f0;">
               <div class="voice-badge voice-imprensa">Voz Imprensa (Press Kit)</div>
               <h3 class="card-title">Comunicação Externa</h3>
-              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 8px;"><strong>Tom:</strong> Factual, conciso, jornalístico e pronto para citação.</p>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;">Em terceira pessoa, sintetiza propostas de valor sem hipérboles vazias.</p>
-              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85rem; color: #d699ff;">
+              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 8px;" class=""><strong class="">Tom:</strong> Factual, conciso, jornalístico e pronto para citação.</p>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;" class="">Em terceira pessoa, sintetiza propostas de valor sem hipérboles vazias.</p>
+              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85rem; color: #d699ff;" class="">
                 "Desenvolvido no Senac Santo Amaro, Locked Unit coloca o jogador sob um limite implacável de 30 minutos em um escape room de horror."
               </div>
             </div>
@@ -165,14 +157,14 @@
         </section>
 
         <!-- 03. TOKENS DE COR -->
-        <section id="tokens">
+        <section id="tokens" class="">
           <div class="section-header">
             <div class="voice-badge voice-manual">Seção 03</div>
             <h2 class="section-title">Tokens de Cor &amp; Paleta Oficial</h2>
             <p class="section-desc">Valores hexadecimais autenticados no código da Unity. Clique no botão de cada cartão para copiar o código HEX.</p>
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; text-transform: uppercase; color: var(--color-hazard-yellow); margin-top: var(--space-4);">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; text-transform: uppercase; color: var(--color-hazard-yellow); margin-top: var(--space-4);" class="">
             Paleta de Interface &amp; Cenário
           </h3>
 
@@ -185,7 +177,7 @@
               <div class="swatch-info">
                 <div class="swatch-name">Preto Abissal</div>
                 <div class="swatch-hex">
-                  <code>#0A0D12</code>
+                  <code class="">#0A0D12</code>
                   <button class="btn-copy-token" data-copy="#0A0D12">Copiar</button>
                 </div>
                 <p class="swatch-role">Fundo imersivo, tela cheia, sombras de vinheta periférica e modais.</p>
@@ -215,7 +207,7 @@
               <div class="swatch-info">
                 <div class="swatch-name">Borda Metálica</div>
                 <div class="swatch-hex">
-                  <code>#485261</code>
+                  <code class="">#485261</code>
                   <button class="btn-copy-token" data-copy="#485261">Copiar</button>
                 </div>
                 <p class="swatch-role">Linhas divisórias, contornos de containers e bordas de containers UI.</p>
@@ -245,7 +237,7 @@
               <div class="swatch-info">
                 <div class="swatch-name">Amarelo Industrial</div>
                 <div class="swatch-hex">
-                  <code>#F0B604</code>
+                  <code class="">#F0B604</code>
                   <button class="btn-copy-token" data-copy="#F0B604">Copiar</button>
                 </div>
                 <p class="swatch-role">Cronômetro global, títulos de capítulos e botões de ação primária.</p>
@@ -298,10 +290,10 @@
             </div>
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; text-transform: uppercase; color: var(--color-primary-cyan); margin-top: var(--space-6);">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; text-transform: uppercase; color: var(--color-primary-cyan); margin-top: var(--space-6);" class="">
             Paleta Oficial do Totem Genius (Fase 2)
           </h3>
-          <p style="color: var(--color-text-medium); font-size: 0.95rem; margin-bottom: var(--space-3);">
+          <p style="color: var(--color-text-medium); font-size: 0.95rem; margin-bottom: var(--space-3);" class="">
             As 5 cores padronizadas no roteiro e na programação da Unity para o puzzle rítmico da Sala de Segurança:
           </p>
 
@@ -342,9 +334,9 @@
                 <span class="badge-key">BOTÃO 3</span>
               </div>
               <div class="swatch-info">
-                <div class="swatch-name">Roxo Neon (Triângulo)</div>
+                <div class="swatch-name">Roxo Escuro Vibrante</div>
                 <div class="swatch-hex">
-                  <code>#A020F0</code>
+                  <code class="">#590090</code>
                   <button class="btn-copy-token" data-copy="#A020F0">Copiar</button>
                 </div>
                 <p class="swatch-role">Botão 2 do Totem. Frequência sonora média (392.0 Hz - Sol).</p>
@@ -384,7 +376,7 @@
         </section>
 
         <!-- 04. TIPOGRAFIA & ESCALA -->
-        <section id="tipografia">
+        <section id="tipografia" class="">
           <div class="section-header">
             <div class="voice-badge voice-manual">Seção 04</div>
             <h2 class="section-title">Tipografia &amp; Escala</h2>
@@ -397,54 +389,54 @@
               <thead>
                 <tr>
                   <th>Família Tipográfica</th>
-                  <th>Peso &amp; Estilo</th>
+                  <th class="">Peso &amp; Estilo</th>
                   <th>Tamanho Base</th>
-                  <th>Uso Semântico</th>
-                  <th>Amostra</th>
+                  <th class="">Uso Semântico</th>
+                  <th class="">Amostra</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><strong>Rubik Dirt</strong></td>
-                  <td>Regular (400)</td>
-                  <td>120px / 48px</td>
-                  <td>Logotipo oficial de Locked Unit e telas de impacto</td>
-                  <td><span style="font-family: var(--font-brand); font-size: 1.3rem;">LOCKED UNIT</span></td>
+                  <td class="">Regular (400)</td>
+                  <td class="">120px / 48px</td>
+                  <td class="">Logotipo oficial de Locked Unit e telas de impacto</td>
+                  <td class=""><span style="font-family: var(--font-brand); font-size: 1.3rem;">LOCKED UNIT</span></td>
                 </tr>
                 <tr>
                   <td><strong>Oswald</strong></td>
-                  <td>SemiBold (600) / Bold (700)</td>
-                  <td>40px / 36px</td>
-                  <td>Títulos de menus, botões principais e visor do cofre</td>
-                  <td><span style="font-family: var(--font-heading); font-size: 1.2rem; text-transform: uppercase;">ABRIR COFRE</span></td>
+                  <td class="">SemiBold (600) / Bold (700)</td>
+                  <td class="">40px / 36px</td>
+                  <td class="">Títulos de menus, botões principais e visor do cofre</td>
+                  <td class=""><span style="font-family: var(--font-heading); font-size: 1.2rem; text-transform: uppercase;" class="">ABRIR COFRE</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Barlow Condensed</strong></td>
-                  <td>Bold (700)</td>
-                  <td>36px</td>
-                  <td>Cronômetro global de 30 minutos no HUD</td>
-                  <td><span style="font-family: var(--font-hud); font-size: 1.4rem; font-weight: 700; color: var(--color-hazard-yellow);">29:54</span></td>
+                  <td class=""><strong class="">Barlow Condensed</strong></td>
+                  <td class="">Bold (700)</td>
+                  <td class="">36px</td>
+                  <td class="">Cronômetro global de 30 minutos no HUD</td>
+                  <td class=""><span style="font-family: var(--font-hud); font-size: 1.4rem; font-weight: 700; color: var(--color-hazard-yellow);" class="">29:54</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Inter</strong></td>
-                  <td>Medium (500) / Regular (400)</td>
-                  <td>24px / 16px</td>
-                  <td>Legendas de rádio de Lucas, corpo de texto e UI geral</td>
-                  <td><span style="font-family: var(--font-body); font-size: 0.95rem;">"Procure as chaves no container lateral."</span></td>
+                  <td class=""><strong>Inter</strong></td>
+                  <td class="">Medium (500) / Regular (400)</td>
+                  <td class="">24px / 16px</td>
+                  <td class="">Legendas de rádio de Lucas, corpo de texto e UI geral</td>
+                  <td class=""><span style="font-family: var(--font-body); font-size: 0.95rem;" class="">"Procure as chaves no container lateral."</span></td>
                 </tr>
                 <tr>
                   <td><strong>Kalam</strong></td>
                   <td>Regular (400)</td>
                   <td>26px</td>
-                  <td>Bilhetes diegéticos manuscritos e notas de festa</td>
-                  <td><span style="font-family: var(--font-handwrite); font-size: 1.2rem; color: #ffeb99;">A senha da gaveta é a data da festa!</span></td>
+                  <td class="">Bilhetes diegéticos manuscritos e notas de festa</td>
+                  <td class=""><span style="font-family: var(--font-handwrite); font-size: 1.2rem; color: #ffeb99;" class="">A senha da gaveta é a data da festa!</span></td>
                 </tr>
                 <tr>
                   <td><strong>JetBrains Mono</strong></td>
                   <td>Regular (400) / Bold (700)</td>
                   <td>14px / 16px</td>
-                  <td>Prompts de teclado (<kbd class="badge-key">E</kbd>, <kbd class="badge-key">TAB</kbd>) e painéis de terminal</td>
-                  <td><span style="font-family: var(--font-code); font-size: 0.9rem;">[E] INSPECIONAR ITEM</span></td>
+                  <td class="">Prompts de teclado (<kbd class="badge-key">E</kbd>, <kbd class="badge-key">TAB</kbd>) e painéis de terminal</td>
+                  <td class=""><span style="font-family: var(--font-code); font-size: 0.9rem;" class="">[E] INSPECIONAR ITEM</span></td>
                 </tr>
               </tbody>
             </table>
@@ -452,7 +444,7 @@
         </section>
 
         <!-- 05. VERBOS E EFEITOS (CORE LOOP) -->
-        <section id="verbos">
+        <section id="verbos" class="">
           <div class="section-header">
             <div class="voice-badge voice-manual">Seção 05</div>
             <h2 class="section-title">Core Loop: Tabela de Verbos &amp; Efeitos</h2>
@@ -464,118 +456,118 @@
             <table class="ds-table">
               <thead>
                 <tr>
-                  <th>Verbo / Ação</th>
-                  <th>Input</th>
-                  <th>Feedback Visual &amp; Juice</th>
-                  <th>Feedback Sonoro</th>
-                  <th>Efeito no Jogo</th>
+                  <th class="">Verbo / Ação</th>
+                  <th class="">Input</th>
+                  <th class="">Feedback Visual &amp; Juice</th>
+                  <th class="">Feedback Sonoro</th>
+                  <th class="">Efeito no Jogo</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><strong>Andar</strong></td>
-                  <td><kbd class="badge-key">W A S D</kbd></td>
-                  <td>Leve balanço de visão (desativável no modo conforto)</td>
-                  <td>Passos atenuados sobre cascalho / metal</td>
-                  <td>Locomoção furtiva sem alertar Augustinho</td>
+                  <td class=""><kbd class="badge-key">W A S D</kbd></td>
+                  <td class="">Leve balanço de visão (desativável no modo conforto)</td>
+                  <td class="">Não possui</td>
+                  <td class="">Locomoção furtiva sem alertar Augustinho</td>
                 </tr>
                 <tr>
                   <td><strong>Correr</strong></td>
                   <td><kbd class="badge-key">Shift</kbd> + <kbd class="badge-key">WASD</kbd></td>
-                  <td>Barra de estamina bilateral acende em ciano e se contrai</td>
-                  <td>Passos ruidosos e respiração ofegante</td>
-                  <td>Aumento de velocidade com consumo de estamina</td>
+                  <td class="">Barra de estamina bilateral acende em ciano e se contrai</td>
+                  <td class="">Respiração ofegante</td>
+                  <td class="">Aumento de velocidade com consumo de estamina</td>
                 </tr>
                 <tr>
-                  <td><strong>Olhar / Mirar</strong></td>
-                  <td><kbd class="badge-key">Mouse</kbd></td>
-                  <td>Retículo central de 4px reage à colisão com objetos</td>
-                  <td>Silêncio de câmera</td>
-                  <td>Inspeção angular e orientação no espaço 3D</td>
+                  <td class=""><strong>Olhar / Mirar</strong></td>
+                  <td class=""><kbd class="badge-key">Mouse</kbd></td>
+                  <td class="">Retículo central de 4px reage à colisão com objetos</td>
+                  <td class="">Silêncio de câmera</td>
+                  <td class="">Inspeção angular e orientação no espaço 3D</td>
                 </tr>
                 <tr>
-                  <td><strong>Interagir / Coletar</strong></td>
-                  <td><kbd class="badge-key">E</kbd></td>
-                  <td>QuickOutline 2px destaca o item em verde-limão</td>
-                  <td>Estalo metálico de chave ou ruído de papel</td>
-                  <td>Armazena chave/nota e abre gavetas e portas</td>
+                  <td class=""><strong>Interagir / Coletar</strong></td>
+                  <td class=""><kbd class="badge-key">E</kbd></td>
+                  <td class="">QuickOutline 2px destaca o item em branco</td>
+                  <td class="">Estalo metálico de chave ou ruído de papel</td>
+                  <td class="">Armazena chave/nota </td>
                 </tr>
                 <tr>
-                  <td><strong>Inspecionar em 3D</strong></td>
-                  <td><kbd class="badge-key">E</kbd> no item alvo</td>
-                  <td>Desfocagem de fundo, objeto centralizado em 360°</td>
-                  <td>Som de atrito sutil ao rotacionar</td>
-                  <td>Permite ler rótulos, datas e números gravados</td>
+                  <td class=""><strong class="">Inspecionar em 3D</strong></td>
+                  <td class=""><kbd class="badge-key">E</kbd> no item alvo</td>
+                  <td class="">Desfocagem de fundo, objeto centralizado em 360°</td>
+                  <td class="">Não possui</td>
+                  <td class="">Permite analisar o itens e números gravados</td>
                 </tr>
                 <tr>
-                  <td><strong>Decodificar Cofre</strong></td>
-                  <td><kbd class="badge-key">Cliques</kbd> ou <kbd class="badge-key">Teclado</kbd></td>
-                  <td>Dígitos acendem em verde e alavanca desce com mola</td>
-                  <td>Cliques mecânicos pesados de tambor</td>
-                  <td>Abre o cofre com a senha de 7 dígitos (2341857)</td>
+                  <td class=""><strong class="">Decodificar Cofre</strong></td>
+                  <td class=""><kbd class="badge-key">Cliques</kbd> ou <kbd class="badge-key">Teclado</kbd></td>
+                  <td class="">Dígitos possuem uma pequena animação e vermelha se errar.</td>
+                  <td class="">Cliques mecânicos pesado</td>
+                  <td class="">Abre o cofre com a senha de 7 dígitos </td>
                 </tr>
                 <tr>
-                  <td><strong>Memorizar / Pressionar</strong></td>
-                  <td><kbd class="badge-key">Cursor</kbd> no Genius</td>
-                  <td>Botão acende a 100% de emissão cromática</td>
-                  <td>Nota musical harmônica dedicada por botão</td>
-                  <td>Avança estágios de 1 a 5 do Totem Genius</td>
+                  <td class=""><strong class="">Memorizar / Pressionar</strong></td>
+                  <td class=""><kbd class="badge-key">Cursor</kbd> no Genius</td>
+                  <td class="">Botão acende a 100% de emissão cromática</td>
+                  <td class="">Nota musical harmônica dedicada por botão</td>
+                  <td class="">Avança estágios de 1 a 7 do Totem Genius</td>
                 </tr>
                 <tr>
                   <td><strong>Vigiar Janela (Gaze Freeze)</strong></td>
-                  <td>Olhar para Augustinho</td>
-                  <td>Luz da lanterna externa estabiliza na guarita</td>
-                  <td>Interrupção imediata dos passos pesados no vidro</td>
-                  <td>Paralisa o avanço de Augustinho no pátio</td>
+                  <td class="">Olhar para Augustinho</td>
+                  <td class="">Luz da lanterna externa estabiliza.</td>
+                  <td class="">Musica volta ao normal</td>
+                  <td class="">Paralisa o avanço de Augustinho.</td>
                 </tr>
                 <tr>
-                  <td><strong>Consultar Inventário</strong></td>
-                  <td><kbd class="badge-key">TAB</kbd></td>
-                  <td>Gaveta translúcida desliza pelo canto superior direito</td>
-                  <td>Som suave de pasta de arquivo abrindo</td>
-                  <td>Exibe todas as pistas coletadas sem pausar a tensão</td>
+                  <td class="">Consultar Notas</td>
+                  <td class=""><kbd class="badge-key">TAB</kbd></td>
+                  <td class="">Abre painel</td>
+                  <td class="">Não possui</td>
+                  <td class="">Exibe todas as pistas coletadas sem pausar a tensão</td>
+                </tr>
+                <tr class="">
+                  <td class=""><strong>Alerta de Proximidade</strong></td>
+                  <td class="">Inimigo &lt; 8 metros</td>
+                  <td class="">Vinheta periférica amarela pulsa em batimentos</td>
+                  <td class="">Batimentos cardíacos acelerados e passos</td>
+                  <td class="">Informa perigo iminente sem necessidade de visão direta</td>
                 </tr>
                 <tr>
-                  <td><strong>Alerta de Proximidade</strong></td>
-                  <td>Inimigo &lt; 8 metros</td>
-                  <td>Vinheta periférica vermelha pulsa em batimentos</td>
-                  <td>Batimentos cardíacos acelerados e passos metálicos</td>
-                  <td>Informa perigo iminente sem necessidade de visão direta</td>
+                  <td class=""><strong class="">Estamina Esgotada</strong></td>
+                  <td class="">Barra em 0%</td>
+                  <td class="">Barra de estamina pulsa em vermelho escuro</td>
+                  <td class="">Ofego profundo de Maria; perda de fôlego</td>
+                  <td class="">Bloqueio temporário da corrida por 3 segundos</td>
                 </tr>
                 <tr>
-                  <td><strong>Estamina Esgotada</strong></td>
-                  <td>Barra em 0%</td>
-                  <td>Barra de estamina pulsa em vermelho escuro</td>
-                  <td>Ofego profundo de Maria; perda de fôlego</td>
-                  <td>Bloqueio temporário da corrida por 3 segundos</td>
+                  <td class=""><strong class="">Tempo Crítico (&lt; 5 min)</strong></td>
+                  <td class="">Relógio global</td>
+                  <td class="">Cronômetro passa de amarelo para vermelho piscante</td>
+                  <td class="">Tique-taque de relógio ganha eco </td>
+                  <td class="">Pressão psicológica máxima para finalização</td>
                 </tr>
                 <tr>
-                  <td><strong>Tempo Crítico (&lt; 5 min)</strong></td>
-                  <td>Relógio global</td>
-                  <td>Cronômetro passa de amarelo para vermelho piscante</td>
-                  <td>Tique-taque de relógio industrial ganha eco metálico</td>
-                  <td>Pressão psicológica máxima para finalização</td>
+                  
+                  
+                  
+                  
+                  
                 </tr>
                 <tr>
-                  <td><strong>Bateria Fraca</strong></td>
-                  <td>Lanterna &lt; 20%</td>
-                  <td>Foco de luz oscila e pisca erraticamente</td>
-                  <td>Estalos de faísca elétrica minúscula</td>
-                  <td>Redução drástica do raio de visão noturna</td>
+                  <td class=""><strong class="">Acerto no Totem</strong></td>
+                  <td class="">Sequência correta</td>
+                  <td class="">Todos os 5 botões piscam simultaneamente em verde</td>
+                  <td class="">Acorde musical ascendente positivo</td>
+                  <td class="">Libera o próximo estágio do puzzle Genius</td>
                 </tr>
                 <tr>
-                  <td><strong>Acerto no Totem</strong></td>
-                  <td>Sequência correta</td>
-                  <td>Todos os 5 botões piscam simultaneamente em verde</td>
-                  <td>Acorde musical ascendente positivo</td>
-                  <td>Libera o próximo estágio do puzzle Genius</td>
-                </tr>
-                <tr>
-                  <td><strong>Falha no Totem</strong></td>
-                  <td>Botão incorreto</td>
-                  <td>Painel vibra e projeta flash vermelho instantâneo</td>
-                  <td>Buzina industrial dissonante de erro</td>
-                  <td>Reinicia a sequência do estágio atual</td>
+                  <td class=""><strong>Falha no Totem</strong></td>
+                  <td class="">Botão incorreto</td>
+                  <td class="">Painel vibra e projeta flash vermelho instantâneo</td>
+                  <td class="">Buzina industrial dissonante de erro e bexiga estourando.</td>
+                  <td class="">Reinicia a sequência do estágio atual</td>
                 </tr>
               </tbody>
             </table>
@@ -583,7 +575,7 @@
         </section>
 
         <!-- 06. COMPONENTES DE UI & HUD -->
-        <section id="componentes">
+        <section id="componentes" class="">
           <div class="section-header">
             <div class="voice-badge voice-manual">Seção 06</div>
             <h2 class="section-title">Componentes de Interface &amp; HUD</h2>
@@ -592,76 +584,62 @@
 
           <div class="cards-grid">
             <div class="card">
-              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 8px;">Cronômetro Global</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;">
-                Ancorado no topo central da tela (<code style="color: var(--color-primary-cyan);">top: 48px</code>). Tipografia Barlow Condensed Bold, 36px. 
-                Cor Amarelo Industrial (#F0B604) por padrão; transiciona para Vermelho de Tensão (#FF2A2A) e pulso rítmico aos 5 minutos restantes.
-              </p>
-              <div style="background: #000; padding: 12px; text-align: center; border-radius: 4px; font-family: var(--font-hud); font-size: 1.8rem; font-weight: 700; color: var(--color-hazard-yellow);">
+              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 8px;" class="">Cronômetro Global</h4>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;" class="">Ancorado no topo central da tela (top: 48px). Tipografia Barlow Condensed Bold, 36px. Cor Branco por padrão; transiciona para Vermelho de Tensão (#FF2A2A) e pulso rítmico aos 5 minutos restantes.</p>
+              <div style="background: rgb(10, 13, 18); padding: 12px; text-align: center; border-radius: 4px; font-family: var(--font-hud); font-size: 1.8rem; font-weight: 700; color: var(--color-hazard-yellow);" class="">
                 24:18
-              </div>
+              </div><img class="preview-img" alt="imagem_2026-11-20_173008526.png" style="max-width: 100%; border-radius: 8px; display: block; margin: 16px auto;" src="assets/img/uploads/imagem_2026-11-20_173008526.png">
             </div>
 
             <div class="card">
-              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 8px;">Retículo Reativo (Crosshair)</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;">
-                Ponto central de 4px com 70% de opacidade. Quando o raycast atinge um objeto com tag <code style="color: var(--color-primary-cyan);">Inspectable</code>, 
+              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 8px;" class="">Retículo Reativo (Crosshair)</h4>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;" class="">
+                Ponto central de 4px com 70% de opacidade. Quando o raycast atinge um objeto com tag <code style="color: var(--color-primary-cyan);" class="">Inspectable</code>, 
                 o retículo expande para um círculo de 14px e exibe a tecla de interação <kbd class="badge-key">E</kbd>.
               </p>
-              <div style="background: #000; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
-                <div style="width: 14px; height: 14px; border: 2px solid var(--color-primary-cyan); border-radius: 50%;"></div>
-              </div>
+              <img class="preview-img" alt="imagem_2026-11-20_173503583.png" style="max-width: 100%; border-radius: 8px; display: block; margin: 16px auto;" src="assets/img/uploads/imagem_2026-11-20_173503583.png">
             </div>
 
             <div class="card">
-              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 8px;">Caixa de Diálogo do Interfone</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;">
-                Ancorada na parte inferior central da tela (<code style="color: var(--color-primary-cyan);">bottom: 64px</code>). 
-                Fundo com 85% de opacidade em Preto Abissal e borda esquerda de 4px em Vermelho de Tensão. Tipografia Inter Medium 22px.
-              </p>
-              <div class="interfone-quote" style="margin: 0; padding: 10px; font-size: 0.85rem;">
-                "Não adianta forçar essa grade, Maria. Use o cérebro."
-              </div>
+              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 8px;" class="">Caixa de Diálogo do Interfone</h4>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;" class="">Ancorada na parte inferior central da tela com a fonte branca. Tipografia Inter Medium 22px.</p>
+              <div class="interfone-quote" style="margin: 0; padding: 10px; font-size: 0.85rem;">"Meu deus maria! Que demora."</div><img class="preview-img" alt="imagem_2026-11-20_172705511.png" style="max-width: 100%; border-radius: 8px; display: block; margin: 16px auto;" src="assets/img/uploads/imagem_2026-11-20_172705511.png">
             </div>
 
             <div class="card">
-              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 8px;">Barra de Estamina Bilateral</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;">
+              <h4 style="font-family: var(--font-heading); text-transform: uppercase; color: var(--color-hazard-yellow); margin-bottom: 8px;" class="">Barra de Estamina Bilateral</h4>
+              <p style="font-size: 0.9rem; color: var(--color-text-medium); margin-bottom: 12px;" class="">
                 Duas linhas simétricas abaixo do retículo de mira. Apenas visível enquanto a jogadora corre. 
                 Recarrega gradualmente após 1.5 segundo de inatividade na locomoção rápida.
               </p>
-              <div style="background: #000; padding: 20px; display: flex; justify-content: center; gap: 8px; border-radius: 4px;">
-                <div style="width: 60px; height: 4px; background: var(--color-primary-cyan);"></div>
-                <div style="width: 60px; height: 4px; background: var(--color-primary-cyan);"></div>
-              </div>
+              <div style="background: #000; padding: 20px; display: flex; justify-content: center; gap: 8px; border-radius: 4px;" class="">
+                <div style="width: 60px; height: 4px; background: var(--color-primary-cyan);" class=""></div>
+                <div style="width: 60px; height: 4px; background: var(--color-primary-cyan);" class=""></div>
+              </div><img class="preview-img" alt="WhatsApp Video 2026-11-20 at 17.41.09.gif" style="max-width: 100%; border-radius: 8px; display: block; margin: 16px auto;" src="assets/img/uploads/whatsapp-video-2026-11-20-at-17.41.09.gif">
             </div>
           </div>
 
-          <div class="image-placeholder-box">
-            <div class="placeholder-icon">📐</div>
-            <div class="placeholder-title">Captura da HUD Integrada no Unity 6</div>
-            <div class="placeholder-desc">Insira a imagem com a tela cheia mostrando cronômetro, retículo e prompt de inspeção (assets/img/uploads/hud-completa.png)</div>
-          </div>
+          <img class="preview-img" alt="imagem_2026-11-20_173834959.png" style="max-width: 100%; border-radius: 8px; display: block; margin: 16px auto;" src="assets/img/uploads/imagem_2026-11-20_173834959.png">
         </section>
 
         <!-- 07. ACESSIBILIDADE & CONFORTO -->
-        <section id="acessibilidade">
+        <section id="acessibilidade" class="">
           <div class="section-header">
             <div class="voice-badge voice-manual">Seção 07</div>
             <h2 class="section-title">Diretrizes de Acessibilidade &amp; Conforto</h2>
             <p class="section-desc">Soluções implementadas na engine para garantir conforto motor, visual e cognitivo para múltiplos perfis de jogadores.</p>
           </div>
 
-          <p style="margin-bottom: var(--space-4); color: var(--color-text-medium); line-height: 1.7;">
+          <p style="margin-bottom: var(--space-4); color: var(--color-text-medium); line-height: 1.7;" class="">
             Em conformidade com as diretrizes do Game Accessibility Guidelines (GAG) e com os ensinamentos da disciplina de Design de Interface, 
-            a Pingado Studios implementou um painel dedicado de <strong>Opções &amp; Acessibilidade</strong> diretamente no menu de pausa e no fluxo de primeira inicialização do jogo:
+            a Pingado Studios implementou um painel dedicado de <strong class="">Opções &amp; Acessibilidade</strong> diretamente no menu de pausa e no fluxo de primeira inicialização do jogo:
           </p>
 
           <div class="cards-grid">
             <div class="card">
               <div class="voice-badge voice-manual">Visual / Exposição</div>
               <h4 class="card-title">Controle Amplo de Brilho (50% a 250%)</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium);">
+              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">
                 Permite calibrar a curva de exposição EV do URP (-1.25 a +2.75 EV). Essencial para jogadores com baixa sensibilidade a contrastes 
                 escuros ou que jogam em monitores com reflexos em ambientes iluminados.
               </p>
@@ -670,7 +648,7 @@
             <div class="card">
               <div class="voice-badge voice-manual">Fisiológico / Anti-Cinetose</div>
               <h4 class="card-title">Modo Câmera Confortável</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium);">
+              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">
                 Desativa 100% da oscilação de cabeça (head bobbing) e suaviza a rotação brusca de câmera em primeira pessoa, 
                 eliminando náuseas e desconforto para pessoas com labirintite ou cinetose.
               </p>
@@ -679,7 +657,7 @@
             <div class="card">
               <div class="voice-badge voice-manual">Visual / Fotossensibilidade</div>
               <h4 class="card-title">Redução de Efeitos Visuais</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium);">
+              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">
                 Remove granulação de filme (Film Grain), desliga a aberração cromática nas bordas da lente e estabiliza tremores intensos de susto.
               </p>
             </div>
@@ -687,7 +665,7 @@
             <div class="card">
               <div class="voice-badge voice-manual">Visual / Campo de Visão</div>
               <h4 class="card-title">Slider de FOV (60° a 110°)</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium);">
+              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">
                 Permite ampliar a visão angular da câmera, prevenindo a sensação de visão de túnel que frequentemente causa tonturas em jogos 3D.
               </p>
             </div>
@@ -695,7 +673,7 @@
             <div class="card">
               <div class="voice-badge voice-manual">Auditivo / Compreensão</div>
               <h4 class="card-title">Legendas em Alto Contraste</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium);">
+              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">
                 Todas as falas de rádio de Lucas e efeitos ambientais críticos são acompanhados por legendas sincronizadas com tarja preta de fundo de alta opacidade.
               </p>
             </div>
@@ -703,18 +681,14 @@
             <div class="card">
               <div class="voice-badge voice-manual">Cognitivo / Multimodal</div>
               <h4 class="card-title">Puzzles com Código Duplo</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-medium);">
+              <p style="font-size: 0.9rem; color: var(--color-text-medium);" class="">
                 O Totem Genius associa simultaneamente cor saturada, posição física dos botões, símbolo geométrico gravado no relevo e tom sonoro exclusivo, 
                 garantindo que jogadores daltônicos ou surdos possam concluir o desafio sem barreiras.
               </p>
             </div>
           </div>
 
-          <div class="image-placeholder-box">
-            <div class="placeholder-icon">⚙️</div>
-            <div class="placeholder-title">Captura do Menu de Opções &amp; Acessibilidade</div>
-            <div class="placeholder-desc">Insira a imagem com a tela de configurações e toggles de conforto (assets/img/uploads/menu-acessibilidade.png)</div>
-          </div>
+          <img class="preview-img" alt="imagem_2026-11-20_173911270.png" style="max-width: 100%; border-radius: 8px; display: block; margin: 16px auto;" src="assets/img/uploads/imagem_2026-11-20_173911270.png">
         </section>
 
       </div>
