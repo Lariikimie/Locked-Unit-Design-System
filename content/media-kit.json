@@ -10,7 +10,13 @@
     "idioma": "Português do Brasil (Vozes e Legendas)",
     "duracao": "Aproximadamente 30 minutos (Vertical Slice)",
     "instituicao": "Centro Universitário Senac – Campus Santo Amaro (SP)",
-    "contato_imprensa": "pingadostudios@gmail.com"
+    "contato_imprensa": "pingadostudios@gmail.com",
+    "redes_sociais": {
+      "instagram": "https://www.instagram.com/pingadostudios/?hl=pt",
+      "linkedin": "https://www.linkedin.com/in/pingado-studios-108715385/",
+      "x": "https://x.com/pingadostudios",
+      "youtube": "https://www.youtube.com/@PingadoStudios"
+    }
   },
   "descricoes": {
     "uma_frase": "Um escape room de horror em primeira pessoa onde uma universitária precisa desvendar os segredos de um depósito de containers antes que 30 minutos se esgotem — enquanto é vigiada por um patrulheiro implacável.",
